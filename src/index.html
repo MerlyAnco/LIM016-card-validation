@@ -6,10 +6,77 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>Miau Shop</header>
+    <header><i>CINE PLAY</i></header>
     <main>
-      <input type="text" placeholder="0000 0000 0000 0000"/>
+      <section id="pagina1" style="display: none">
+        <p>CARTELERA</p>
+        <div class="pelicula">
+          <img src="https://static.wikia.nocookie.net/spiderman/images/f/f9/The_Amazing_Spider_Man_Poster.png/revision/latest?cb=20131213215215&path-prefix=es"><br>Spiderman: Regreso a casa<br>
+          <input type="button" value="comprar"> 
+        </div>
+        <div class="pelicula">
+          <img src="https://cl.buscafs.com/www.tomatazos.com/public/uploads/images/82203/82203_800x800.jpg"><br>Yo antes de ti<br>
+          <input type="button" value="comprar"> 
+        </div>
+        <div class="pelicula">
+          <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/36204-715581-20210601021907.jpg"><br>El Conjuro 3<br>
+          <input type="button" value="comprar"> 
+        </div>
+      </section>
+
+      <section id="pagina2" style="display:none">  
+        <form name:"horario">
+          <p>Paso 2: Eliga en que horario desea ver su pelicula ^-^: <br> 
+            
+            <input type="radio" id="op1" name="hora" value="1"/> <label for="op1">10:00 am</label> <br>
+            <input type="radio" id="op2" name="hora" value="2"/> <label for="op2">1:00 pm</label> <br>
+            <input type="radio" id="op3" name="hora" value="3"/> <label for="op3">4:00 pm</label> <br>
+            <input type="radio" id="op4" name="hora" value="4"/> <label for="op4">8:00 pm</label> <br>
+          
+          </p>
+        </form>
+        <div>
+        <p>Paso 3: ¿Cuántos asiento desea reservar?: <br><br>
+          <div>
+            Recuerde que el precio por cada entrada es de S/.20.00
+          </div><br><br>
+
+          <label for="asientos">Ingrese el N°</label>
+          <input type="text" id="asientos" size="3px"> 
+          </label>
+        </p>
+
+        <button type="button">Siguiente</button>
+      </div>
+      </section>
+
+      <aside id="left"> Importe </aside>
+
+      <form id="pago">
+        <div  id="payment">
+          <p> PAGAR CON TARJETA</p> <br>
+
+          <label for="name"> Titular de la tarjeta:<br> </label>
+          <input type="text" id="name" placeholder="nombre y apellido"><br><br>
+          
+          <label for="number_card">N° de la tarjeta:<br></label> 
+          <input type="text" id="number_card" placeholder= "0000 0000 0000 0000"><br><br>
+          <div class="item3">
+            <label for="date">Fecha de Expiración</label><br>
+            <input type="text" id="date" maxlength="2" placeholder="MM">
+            <input type="text" id="date" maxlength="2" placeholder="YY">
+          </div>
+          <div class="item3">
+            <label for="cvv">CVV</label><br>
+            <input type="text" id="cvv" maxlength="3" placeholder="***">
+          </div><br><br>
+          <button type="button">PAGAR</button>
+        </div>
+      </form>
+
+
     </main>
+    <br>
     <footer>CONTACTENOS</footer>
     <script src="index.js" type="module"></script>
   </body>
