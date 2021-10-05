@@ -12,7 +12,7 @@
       <section id="pagina1" style="display: block">
         <p>CARTELERA</p>
         <div class="pelicula">
-          <img src="https://static.wikia.nocookie.net/spiderman/images/f/f9/The_Amazing_Spider_Man_Poster.png/revision/latest?cb=20131213215215&path-prefix=es"><br>Spiderman: Regreso a casa<br>
+          <img src="https://play-lh.googleusercontent.com/B2eU_pWR1jCw1_gNu_7TybeiKXGrakP2PvWI5aNn78geh1SXMZzdG4eF853b7peM0Iqocw"><br>Spiderman: Regreso a casa<br>
           <input type="button" id="btn1" value="comprar"> 
         </div>
         <div class="pelicula">
@@ -47,35 +47,55 @@
           </label>
         </p>
 
-        <button type="button">Siguiente</button>
+        <button type="button" id="paso2">Siguiente</button>
       </div>
       </section>
 
-      <section class="pagina3" style="display:none">
-
-      <aside id="left"> Importe </aside>
-
-      <form id="pago">
-        <div  id="payment">
-          <p> PAGAR CON TARJETA</p> <br>
-
-          <label for="name"> Titular de la tarjeta:<br> </label>
-          <input type="text" id="name" placeholder="nombre y apellido"><br><br>
-          
-          <label for="number_card">N° de la tarjeta:<br></label> 
-          <input type="text" id="number_card" placeholder= "0000 0000 0000 0000"><br><br>
-          <div class="item3">
-            <label for="date">Fecha de Expiración</label><br>
-            <input type="text" id="date" maxlength="2" placeholder="MM">
-            <input type="text" id="date" maxlength="2" placeholder="YY">
+      <section id="pagina3" style="display:none">
+        
+        <div class="pag3">
+          <div class="importe">
+            <p>Importe</p>
           </div>
-          <div class="item3">
-            <label for="cvv">CVV</label><br>
-            <input type="text" id="cvv" maxlength="3" placeholder="***">
-          </div><br><br>
-          <button type="button">PAGAR</button>
+
+          <div class="cuadroDeFormulario">
+            <p>PAGAR CON TARJETA</p>
+
+            <form action="" id="pago" class="pago" >
+              
+              <div class="formulario>">
+                <label for="name"> Titular de la tarjeta:<br> </label>
+                <input type="text" id="name" placeholder="nombre y apellido" required><br><br>
+              </div>
+
+              <div class="formulario>">
+                <label for="number_card">N° de la tarjeta:<br></label> 
+                <input type="text" id="number_card" placeholder= "0000 0000 0000 0000" maxlenght=19 autocomplete="off" required><br><br>
+              </div>
+
+              <div class="flexbox">
+                <div class="formulario expiracion">
+                  <label for="selectMes">Fecha de Expiración</label><br>
+                  <div class="flexbox">
+                    <div class="añoDeExpiracion">
+                      <input type="text" id="selectMes" maxlength="2" placeholder="MM" required>
+                    </div>
+                    <div class="añoDeExpiracion">
+                      <input type="text" id="year" maxlength="2" placeholder="YY" required>
+                    </div>
+                  </div>
+                </div>
+          
+
+                <div class="cvv">
+                  <label for="cvv">CVV</label><br>
+                  <input type="text" id="cvv" maxlength="3" placeholder="***" required>
+                </div><br><br>
+              </div>
+              <button type="button" id="btnDatos">PAGAR</button>
+            </form>
+          </div>
         </div>
-      </form>
       </section>
 
     </main>
