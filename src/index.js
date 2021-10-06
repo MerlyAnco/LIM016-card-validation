@@ -1,3 +1,8 @@
+import validator from './validator.js';
+
+const boxNumber = document.querySelector("#formularioTotal")
+    
+
 //pasar de pagina 1 a pagina 2
 
 document.getElementById("btn2").addEventListener("click", ()=>{
@@ -12,26 +17,59 @@ document.getElementById("paso2").addEventListener("click",()=>{
     document.getElementById("pagina3").style.display="block"
     ;});
 
-//conseguir elementos para validar la tarjeta
+//No dejar que se escriban letras en las caja de numero de tarjeta 
 
+
+boxNumber.inputNumber.addEventListener("keyup", (e)=>{
+    let valorNumero = e.target.value;
+
+    boxNumber.inputNumber.value=valorNumero
+    //Eliminando espacios en blanco
+    .replace(/\s/g, "")
+    //Eliminando letras
+    .replace(/\D/g, "")
+});
+
+//No dejar que se escriban numeros en titular de la tarjeta
+const boxNumber = document.querySelector("#formularioTotal")
+
+boxNumber.inputNumber.addEventListener("keyup", (e)=>{
+    let valorNumero = e.target.value;
+
+    boxNumber.inputNumber.value=valorNumero
+    //Eliminando espacios en blanco
+    .replace(/\s/g, "")
+    //Eliminando letras
+    .replace(/\D/g, "")
+});
+
+
+
+
+//conseguir elementos para validar la tarjeta
+const creditNumberCard = document.querySelector("#inputNumber");
+
+const btnPagar = document.querySelector("#btnDatos")
+
+function validar(){
+    let numeroTarjeta = creditNumberCard.value
+
+    if(numeroTarjeta==""){
+        alert("ingrese un numero de tarjeta");
+    }
+}
+
+btnPagar.addEventListener("click",validar);
+
+
+/*
 let datos = function(){
     let name = document.getElementById("name").value;
     let numberCard = document.getElementById("number_card").value;
+    console.log(name + numberCard)
 }
 
-document.getElementById("btnDatos").addEventListener("click",datos);
+document.getElementById("btnDatos").addEventListener("click",datos);*/
 
 
-
-
-
-
-
-
-
-
-
-
-import validator from './validator.js';
-
-console.log(validator);
+//console.log(validator);
