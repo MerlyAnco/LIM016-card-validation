@@ -21,6 +21,18 @@ const validator = {
   }
 }
 
+function numerosOcultos(numeroTarjeta){
+  let digitos = [];
+  for(let i = 0; i < numeroTarjeta.length;i++){
+    if(i<numeroTarjeta.length-4){
+      digitos.push("*");
+    }
+    else{
+      digitos.push(numeroTarjeta[i]);
+    }
+  }
+  return digitos.join("");
+}
 
 
 export default validator;

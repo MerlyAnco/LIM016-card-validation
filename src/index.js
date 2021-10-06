@@ -19,7 +19,6 @@ document.getElementById("paso2").addEventListener("click",()=>{
 
 //No dejar que se escriban letras en las caja de numero de tarjeta 
 
-
 boxNumber.inputNumber.addEventListener("keyup", (e)=>{
     let valorNumero = e.target.value;
 
@@ -31,17 +30,26 @@ boxNumber.inputNumber.addEventListener("keyup", (e)=>{
 });
 
 //No dejar que se escriban numeros en titular de la tarjeta
-const boxNumber = document.querySelector("#formularioTotal")
 
-boxNumber.inputNumber.addEventListener("keyup", (e)=>{
-    let valorNumero = e.target.value;
+boxNumber.name.addEventListener("keyup", (e)=>{
+    let valorNombre = e.target.value;
 
-    boxNumber.inputNumber.value=valorNumero
+    boxNumber.name.value=valorNombre
+    //Eliminando numeros
+    .replace(/\d/g, "")
+});
+
+//No dejar que en CVV se escriba letras
+boxNumber.cvv.addEventListener("keyup", (e)=>{
+    let valorCvv = e.target.value;
+
+    boxNumber.cvv.value=valorCvv
     //Eliminando espacios en blanco
     .replace(/\s/g, "")
     //Eliminando letras
     .replace(/\D/g, "")
 });
+//validar numeros
 
 
 
