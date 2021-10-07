@@ -1,6 +1,7 @@
 
 body{
     background-image: url(https://previews.123rf.com/images/volyk/volyk1709/volyk170900011/85257182-comida-r%C3%A1pida-pop-corn-repite-el-dise%C3%B1o-en-el-patr%C3%B3n-de-fondo-transparente.jpg);
+    width: 100%;
     
 }
 
@@ -34,13 +35,28 @@ img{
 
 .pago .cvv{
     min-width: 100px;
+    width: 20px;
+    height: 20px;
+}
+
+#cvv{
+    width: 50%;
 }
 
 .pago .añoDeExpiracion{
     width: 100%;
-    margin-right: 10px;
+    margin-right: 5px;
+}
+
+#sele
+
+.cuadroDeFormulario{
+    background-color: lightcoral;
+    width: 50%;
+
 }
 .pag3{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+

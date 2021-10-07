@@ -49,9 +49,6 @@ boxNumber.cvv.addEventListener("keyup", (e)=>{
     //Eliminando letras
     .replace(/\D/g, "")
 });
-//validar numeros
-
-
 
 
 //conseguir elementos para validar la tarjeta
@@ -60,10 +57,15 @@ const creditNumberCard = document.querySelector("#inputNumber");
 const btnPagar = document.querySelector("#btnDatos")
 
 function validar(){
-    let numeroTarjeta = creditNumberCard.value
-
-    if(numeroTarjeta==""){
-        alert("ingrese un numero de tarjeta");
+    let numeroTarjeta = creditNumberCard.value;
+    
+    if((validator.isValid(numeroTarjeta)%10)===0){
+        console.log("la tarjeta es valida");
+        console.log(validator.maskify(numeroTarjeta)) 
+    }
+    else{
+        console.log("la tarjeta no es valida");
+        console.log(validator.maskify(numeroTarjeta))
     }
 }
 
@@ -80,4 +82,4 @@ let datos = function(){
 document.getElementById("btnDatos").addEventListener("click",datos);*/
 
 
-//console.log(validator);
+//console.log(validator)

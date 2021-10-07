@@ -1,37 +1,43 @@
 const validator = {
-  function(numeroTarjeta){
-    let numeros = Array.numeroTarjeta.toString().split(',').map(Number);
-    
+  isValid: function (numeroTarjeta){
+    let numeros = Array.from(numeroTarjeta).map(Number);
+    //let numeros = Array.numeroTarjeta[]
+
     let sumarDigitos=0;
-    for(i = 0; i < numeros.length; i++) {
+
+    for(let i = 0; i < numeros.length; i++) {
       if(i%2===0){ //posicion impar
         if((numeros[i]*2)>=10){
-          numeros[i]=numeros[i]*2-9;
+            numeros[i]=numeros[i]*2-9;
         }
         else{
-          numeros[i]=numeros[i]*2;
+            numeros[i]=numeros[i]*2;
         }
-      }
+        }
       else{ //posicion par
         numeros[i];
-      }
-      sumarDigitos = sumarDigitos + numeros[i];
+        }
+        sumarDigitos = sumarDigitos + numeros[i];
+    }
+    return sumarDigitos;
+    
+    },
+
+//reemplazar numeros con *
+
+  maskify: function(numeroTarjeta){
+    let digitos = [];
+    for(let i = 0; i < numeroTarjeta.length;i++){
+        if(i<numeroTarjeta.length-4){
+        digitos.push("*");
+        }
+        else{
+        digitos.push(numeroTarjeta[i]);
+        }
+    }
+    return digitos.join("");
     }
 
-  }
-}
-
-function numerosOcultos(numeroTarjeta){
-  let digitos = [];
-  for(let i = 0; i < numeroTarjeta.length;i++){
-    if(i<numeroTarjeta.length-4){
-      digitos.push("*");
-    }
-    else{
-      digitos.push(numeroTarjeta[i]);
-    }
-  }
-  return digitos.join("");
 }
 
 
