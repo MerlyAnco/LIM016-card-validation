@@ -1,12 +1,12 @@
 const validator = {
   isValid: function (numeroTarjeta){
-    let numeros = Array.from(numeroTarjeta).map(Number);
+    let numeros = Array.from(numeroTarjeta).map(Number).reverse();
     //let numeros = Array.numeroTarjeta[]
 
     let sumarDigitos=0;
 
     for(let i = 0; i < numeros.length; i++) {
-      if(i%2===0){ //posicion impar
+      if(i%2===1){ //posicion impar
         if((numeros[i]*2)>=10){
             numeros[i]=numeros[i]*2-9;
         }
@@ -19,7 +19,7 @@ const validator = {
         }
         sumarDigitos = sumarDigitos + numeros[i];
     }
-    return sumarDigitos;
+    return sumarDigitos%10==0;
     
     },
 
@@ -29,7 +29,7 @@ const validator = {
     let digitos = [];
     for(let i = 0; i < numeroTarjeta.length;i++){
         if(i<numeroTarjeta.length-4){
-        digitos.push("*");
+        digitos.push("#");
         }
         else{
         digitos.push(numeroTarjeta[i]);

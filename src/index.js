@@ -59,11 +59,13 @@ const btnPagar = document.querySelector("#btnDatos")
 function validar(){
     let numeroTarjeta = creditNumberCard.value;
     
-    if((validator.isValid(numeroTarjeta)%10)===0){
+    if(validator.isValid(numeroTarjeta)){
+        console.log(validator.isValid(numeroTarjeta));
         console.log("la tarjeta es valida");
         console.log(validator.maskify(numeroTarjeta)) 
     }
     else{
+        console.log(validator.isValid(numeroTarjeta));
         console.log("la tarjeta no es valida");
         console.log(validator.maskify(numeroTarjeta))
     }
