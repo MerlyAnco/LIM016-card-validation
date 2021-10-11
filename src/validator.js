@@ -1,5 +1,6 @@
 const validator = {
-  isValid: function (numeroTarjeta){
+  isValid:function (numeroTarjeta){
+    
     let numeros = Array.from(numeroTarjeta).map(Number).reverse();
     //let numeros = Array.numeroTarjeta[]
 

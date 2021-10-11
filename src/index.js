@@ -27,6 +27,10 @@ boxNumber.inputNumber.addEventListener("keyup", (e)=>{
     .replace(/\s/g, "")
     //Eliminando letras
     .replace(/\D/g, "")
+    //agrupando cada 4 
+    .replace(/([0-9]{4})/g, '$1 ')
+    //quitando ultimo espacios 
+    .trim()
 });
 
 //No dejar que se escriban numeros en titular de la tarjeta
@@ -48,6 +52,7 @@ boxNumber.cvv.addEventListener("keyup", (e)=>{
     .replace(/\s/g, "")
     //Eliminando letras
     .replace(/\D/g, "")
+    
 });
 
 
@@ -57,7 +62,7 @@ const creditNumberCard = document.querySelector("#inputNumber");
 const btnPagar = document.querySelector("#btnDatos")
 
 function validar(){
-    let numeroTarjeta = creditNumberCard.value;
+    let numeroTarjeta = creditNumberCard.value.replace(/\s/g, "");
     let cifrado = validator.maskify(numeroTarjeta)
     let tipoTarjeta = validator.tarjetType(numeroTarjeta)
 
@@ -73,11 +78,13 @@ function validar(){
         document.getElementById("resultado").style.display="block";
     }
     else{
-
+        alert("la tarjeta que ingreso no es valida, por favor verifique de nuevo")
+        /*
         document.getElementById("validatorTarjeta").style.color= "rgb(255,99,71)";
         document.getElementById("validatorTarjeta").innerHTML="NO ES VALIDA";
         document.getElementById("pagina3").style.display="none";
-        document.getElementById("resultado").style.display="block"
+        document.getElementById("resultado").style.display="block";
+        document.getElementById("logo").style.display="none"*/
     }
 }
 
