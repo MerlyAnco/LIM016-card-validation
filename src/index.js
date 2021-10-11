@@ -58,16 +58,26 @@ const btnPagar = document.querySelector("#btnDatos")
 
 function validar(){
     let numeroTarjeta = creditNumberCard.value;
-    
-    if(validator.isValid(numeroTarjeta)){
-        console.log(validator.isValid(numeroTarjeta));
-        console.log("la tarjeta es valida");
-        console.log(validator.maskify(numeroTarjeta)) 
+    let cifrado = validator.maskify(numeroTarjeta)
+    let tipoTarjeta = validator.tarjetType(numeroTarjeta)
+
+    if(numeroTarjeta==""){
+        alert("Por favor ingrese un numero de tarjeta")
+    }
+    else if (validator.isValid(numeroTarjeta)){
+        document.getElementById("logo").innerHTML=tipoTarjeta;
+        document.getElementById("maskifyTarjeta").innerHTML = "La tarjeta que termina en " + cifrado;
+        document.getElementById("validatorTarjeta").style.color="rgb(14,158,55)";
+        document.getElementById("validatorTarjeta").innerHTML="ES VALIDA";
+        document.getElementById("pagina3").style.display="none";
+        document.getElementById("resultado").style.display="block";
     }
     else{
-        console.log(validator.isValid(numeroTarjeta));
-        console.log("la tarjeta no es valida");
-        console.log(validator.maskify(numeroTarjeta))
+
+        document.getElementById("validatorTarjeta").style.color= "rgb(255,99,71)";
+        document.getElementById("validatorTarjeta").innerHTML="NO ES VALIDA";
+        document.getElementById("pagina3").style.display="none";
+        document.getElementById("resultado").style.display="block"
     }
 }
 
