@@ -23,7 +23,7 @@ empresa requeria un validador de tarjeta para poder procesar con el cobro correc
 
 
 
-![gráfica de algoritmo de Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
+![gráfica de algoritmo de Luhn](https://github.com/MerlyAnco/LIM016-card-validation/blob/main/img/producto%201.jpg)
 
 ## 2. Resumen del proyecto
 
