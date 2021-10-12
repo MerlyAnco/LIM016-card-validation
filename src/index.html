@@ -7,22 +7,73 @@
     
   </head>
   <body>
-    <header><i>CINE PLAY</i></header>
+    <header class="navegador">
+        <label class="logo">YOUR SKIN</label>
+        <ul class="menu">
+          <li>INICIO</li>
+          <li>PRODUCTOS</li>
+          <li>OFERTAS</li>
+          <li>CONTACTOS</li>
+        </ul>
+    </header>
+    <br><br>
+    
     <main>
       <section id="pagina1" style="display: block">
-        <p>CARTELERA</p>
-        <div class="pelicula">
-          <img src="https://play-lh.googleusercontent.com/B2eU_pWR1jCw1_gNu_7TybeiKXGrakP2PvWI5aNn78geh1SXMZzdG4eF853b7peM0Iqocw"><br>Spiderman: Regreso a casa<br>
-          <input type="button" id="btn1" value="comprar"> 
+        <div class="portada">
+          <img id="portada" src="https://scontent.fjau1-1.fna.fbcdn.net/v/t1.6435-9/242728786_4381106701971013_5605588341506137233_n.png?_nc_cat=111&ccb=1-5&_nc_sid=e3f864&_nc_eui2=AeFeFP9OD8fTFGGd1dkDSzQjicULJvQJGHeJxQsm9AkYd7IC7BpvXBzfrTQGHQ4we5lREy2ny9_dJqjTR-IjJRVU&_nc_ohc=YaC_rmOUiisAX9qG1qd&_nc_ht=scontent.fjau1-1.fna&oh=30c3b1294698f4876e9be024486d4514&oe=618A2B6D">
         </div>
-        <div class="pelicula">
-          <img src="https://cl.buscafs.com/www.tomatazos.com/public/uploads/images/82203/82203_800x800.jpg"><br>Yo antes de ti<br>
-          <input type="button" id="btn2" value="comprar"> 
-        </div>
-        <div class="pelicula">
-          <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/36204-715581-20210601021907.jpg"><br>El Conjuro 3<br>
-          <input type="button" id="btn3" value="comprar"> 
-        </div>
+        <br><br>
+        <h1>PRODUCTOS MAS VENDIDOS</h1><br><br><br>
+        <ul id="flexboxPag1">
+          <li>
+            <p class="tipoProducto">crema</p>
+            <p class="descripcion">Crema hidratante para el rostro - Innisfree</p>
+            <img class="productos" src="https://mint07.com/wp-content/uploads/2020/08/kem-duong-innisfree-jeju-cherry-blossom-jelly-cream.jpg">
+            <div class="comprarflex">
+              <p class="precio">S/. 40.00 </p>
+              <button type="button" class="btn1" id="comprar1" value="40">comprar</button>
+            </div>
+          </li>
+
+          <li>
+            <p class="tipoProducto">mascarilla</p>
+            <p class="descripcion">Mascarilla para ojos Pink Blur</p>
+            <img class="productos" src="https://static.wixstatic.com/media/f5a2cd_e6e2b53b70e5474eb15a52696b19d15a~mv2.png/v1/fill/w_1000,h_1200,al_c/f5a2cd_e6e2b53b70e5474eb15a52696b19d15a~mv2.png">
+            <div class="comprarflex">
+              <p class="precio">S/. 50.00 </p>
+              <button type="button" class="btn1" id="comprar2" value="40">comprar</button>
+            </div>
+          </li>
+          <li>
+            <p class="tipoProducto">serum</p>
+            <p class="descripcion">Serum calmante de extracto de árbol de té</p>
+            <img class="productos" src="https://www.skinthinks.com/3846-home_default/beauty-of-joseon-green-tea-panthenol-calming-serum.jpg">
+            <div class="comprarflex">
+              <p class="precio">S/. 80.00 </p>
+              <button type="button" class="btn1" id="comprar3" value="40">comprar</button>
+            </div>
+          </li>
+          <li>
+            <p class="tipoProducto">mascarilla</p>
+            <p class="descripcion">Mascarilla facial de colageno</p>
+            <img class="productos" src="https://img.clasf.pe/2020/04/11/Mascarilla-Facial-Coreana-De-Colageno-20200411101219.2479880015.jpg">
+            <div class="comprarflex">
+              <p class="precio">S/. 8.00 </p>
+              <button type="button" class="btn1" id="comprar4" value="40">comprar</button>
+            </div>
+          </li>
+          <li>
+            <p class="tipoProducto">exfoliante</p>
+            <p class="descripcion">Exfoliante Appletox - Tony Molly</p>
+            <img class="productos" src="https://www.sugoikbeauty.com/wp-content/uploads/2017/08/sugoikbeautymissha17.jpg">
+            <div class="comprarflex">
+              <p class="precio">S/. 42.00 </p>
+              <button type="button" class="btn1" id="comprar5" value="40">comprar</button>
+            </div>
+          </li>
+
+        </ul>
       </section>
 
       <section id="pagina2" style="display:none">  
