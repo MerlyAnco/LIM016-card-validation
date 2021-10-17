@@ -11,20 +11,19 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Definición del producto
+EL producto que se creo que una pagina web para una emprendimiento de mascarrillas, esta empresa realizaba 
+sus ventas a traves de whatsapp y facebook pero su capacidad de atención no alcanza a responder a todos; 
+muchos de sus clientes le solicitaban una pagina web en donde pudierar observar los prpductos que tenia 
+y poder comprarlos ahi mismo.
 
-El [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn),
-también llamado algoritmo de módulo 10, es un método de suma de verificación,
-se utiliza para validar números de identificación; tales como el IMEI de los
-celulares, tarjetas de crédito, etc.
+En consecuencia de ellos la empresa necesitaba una plataforma en donde se observe sus productos y que tambien
+se pueda realizar las compra y el pago por ese medio. Para poder realizar el pago correctamente tambien la 
+empresa requeria un validador de tarjeta para poder procesar con el cobro correctamente.
 
-Este algoritmo es simple. Obtenemos la reversa del número a verificar (que
-solamente contiene dígitos [0-9]); a todos los números que ocupan una posición
-par se les debe multiplicar por dos, si este número es mayor o igual a 10,
-debemos sumar los dígitos del resultado; el número a verificar será válido si
-la suma de sus dígitos finales es un múltiplo de 10.
 
-![gráfica de algoritmo de Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
+
+![gráfica de algoritmo de Luhn](https://github.com/MerlyAnco/LIM016-card-validation/blob/main/img/producto%201.jpg)
 
 ## 2. Resumen del proyecto
 
