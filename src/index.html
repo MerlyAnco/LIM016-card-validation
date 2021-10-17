@@ -76,35 +76,51 @@
         </ul>
       </section>
 
-      <section id="pagina2" style="display:none">  
-        <form name="horario">
-          <p>Paso 2: Eliga en que horario desea ver su pelicula ^-^: <br> 
-            
-            <input type="radio" id="op1" name="hora" value="1"/> <label for="op1">10:00 am</label> <br>
-            <input type="radio" id="op2" name="hora" value="2"/> <label for="op2">1:00 pm</label> <br>
-            <input type="radio" id="op3" name="hora" value="3"/> <label for="op3">4:00 pm</label> <br>
-            <input type="radio" id="op4" name="hora" value="4"/> <label for="op4">8:00 pm</label> <br>
+      <section id="informacion" class="informacion">
+        <div id="informacionDeContacto">
+          <h id="informacion">Información de contacto</h><br>
+          <p>los campos marcados con * son obligatorio</p><br>
+          <label for="correo electronico">Correo electrónico*</label><br>
+          <input type="text" id="correoElectronico" placeholder="correo electrónico" autocomplete="off" required>
           
-          </p>
-        </form>
-
-        <div>
-        <p>Paso 3: ¿Cuántos asiento desea reservar?: <br><br>
-          <div>
-            Recuerde que el precio por cada entrada es de S/.20.00
-          </div><br><br>
-
-          <label for="asientos">Ingrese el N°</label>
-          <input type="text" id="asientos" size="3px"> 
+          <div class="flexBox">
+            <div class="nombre">
+              <label for="name">Nombre*</label> <br>
+              <input type="text" id="name" placeholder="nombre" autocomplete="off" required></div>
+            <div class="apellido">
+              <label for="apellidos">Apellidos*</label><br>
+              <input type="text" id="apellidos" placeholder="apellidos" autocomplete="off" required></div>
+          </div>
           
-        </p>
+          <label for="direccion">Dirección de la calle*</label><br>
+          <input type="text" id="direccion" placeholder="dirección" autocomplete="off" required> 
+          
+          <div class="flexBox"><br>
+            <div class="departamento">
+              <label for="departamento">Departamento*</label><br>
+              <input type="text" id="departamento" placeholder="departamento"></div>
+            <div class="provincia">
+              <label for="provincia">Provincia*</label><br>
+              <input type="text" id="provincia" placeholder="provincia"></div>
+            <div class="distrito">
+              <label for="distrito">Distrito*</label><br>
+              <input type="text" id="distrito" placeholder="distrito"></div>
+          </div>
 
-        <button type="button" id="paso2">Siguiente</button>
-      </div>
+          <label for="telefono">Teléfono*</label><br>
+          <input type="text" id="telefono" placeholder="número de telefono">
+          <br>
+          <button id="enviarInformacio">Continuar envio</button>
+        </div>
+
+        <div class="productoElegidos">
+          hola
+        </div>
+        
       </section>
 
       <section class="pagina3" id="pagina3" style="display:none">
-        
+
         <div class="pag3">
           <div class="importe">
             <p>Importe</p>
@@ -156,14 +172,43 @@
         <img src = "foto.png" id="logo">
         <div id="maskifyTarjeta"></div><br>
         <div id="validatorTarjeta"></div>
-        
-        
-
       </div>
 
     </main>
     <br>
-    <footer>CONTACTENOS</footer>
+    <footer>
+      <div class="container_footer">
+        <div class="box_footer">
+          <div class="logo">
+            <img src="foto.png" alt="">
+          </div>
+          <div class="terms">
+            <p>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, exercitationem. Ab sed exercitationem tempore dolorum repudiandae! Sequi soluta optio consequuntur nemo iure cupiditate deserunt ea, itaque consequatur possimus, natus deleniti!</p>
+          </div>
+        </div>
+        <div class="box_footer">
+          <h>Sobre Skin Care</h>
+          <a href="#">Sobre Nosotros</a>
+          <a href="#">Contacto</a>
+          <a href="#">Blog</a>
+          <a href="#">Mapa del sitio</a>
+        </div>
+      </div>
+      <div class="box_footer">
+        <h>Ayuda</h>
+        <a href="#">¿Cómo comprar?</a>
+        <a href="#">Preguntas Frecuentes</a>
+        <a href="#">Información de envío</a>
+        <a href="#">Políticas de devoluciones</a>
+        <a href="#">Términos y condiciones</a>
+      </div>
+      <div class="box_footer">
+        <a img="/img/facebook.png">facebook</a>
+        <a img="/img/instagram.png"></a>
+        <a href="/img/twitter.png">twitter</a>
+      </div>
+    
+    </footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>

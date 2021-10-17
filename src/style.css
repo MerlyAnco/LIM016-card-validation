@@ -191,3 +191,46 @@ h1{
     background-color: rgb(255, 255, 255);
 }
 
+/*Diseño de la pagina de informacion*/
+.informacion .flexBox{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.informacion{
+    display: flex;
+    justify-content: space-between;
+}
+#informacionDeContacto{
+    border-right: 1px solid gray;
+    padding: 0 40px;
+}
+.informacion h{
+    font-size: 25px;
+    padding-left: 25%;
+    color: rgb(235, 42, 74);
+    font-weight: bold;
+    line-height: 15mm;
+}
+.informacion p{
+    font-size: 15px;
+    color: gray;
+    font-style: italic;
+
+}
+.informacion label{
+    font-size: 15px;
+    padding: 5px 12px;
+    line-height: 10mm;
+    font-weight: bold;
+}
+.informacion input{
+    border: 1px solid rgb(194, 194, 194);
+    font-size: 15px;
+    height: 50px;
+    width: 90%;
+    padding: 5px 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
