@@ -141,7 +141,7 @@ h1{
 }
 /* diseño del la caja de resultados */
 #resultado{
-    background-color: rgb(188, 241, 241);
+    background-color: white;
 }
 /* diseño del logo de tarjeta */
 #resultado #logo{
