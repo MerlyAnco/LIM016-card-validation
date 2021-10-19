@@ -184,19 +184,19 @@ h1{
     width: 50%;
 
 }
-.pag3{
+/*.pag3{
     display: flex;
     justify-content: space-around;
 }
+*/
 
-
-/* diseño del logo de tarjeta */
+/* DISEÑO DEL LOGO DE LA TARJETA */
 #resultado #logo{
     width: 80px;
     height: 50px;
 }
 
-/*diseño del formulario*/
+/*DISEÑO DEL FORMULARIO DE TARJETA*/
 .pagina3 .cuadroDeFormulario{
     background-color: rgb(255, 255, 255);
     border-left: 1px solid gray;
@@ -217,7 +217,7 @@ h1{
     padding-left:10%;
     font-family: arial;
 }
-.pagina3 input{
+.cuadroDeFormulario input{
     border: 1px solid rgb(194, 194, 194);
     font-size: 18px;
     height: 50px;
@@ -226,15 +226,15 @@ h1{
     border-radius: 5px;
     margin-bottom: 15px;
 }
-.pagina3 input:hover{
+.cuadroDeFormulario input:hover{
     border: 2px solid #85878a
 }
-.pagina3 input:focus{
+.cuadroDeFormulario input:focus{
     outline: black;
     box-shadow: 1px 7px 10px -5px rgb(187, 184, 174);
 }
 
-.pagina3 label{
+.cuadroDeFormulario label{
     font-size: 15px;
     padding: 5px 12px;
     line-height: 10mm;
@@ -255,14 +255,9 @@ h1{
     padding-left: 12px;
 }
 
-/*diseño de la compra*/
-.pagina3 .importe{
-    width: 50%;
-    height: 80vh;
-    background-color: rgb(255, 255, 255);
-}
 
-/*Diseño de la pagina de informacion*/
+
+/*DISEÑO DE LA PAG. DE INFORMACIÓN*/
 .informacion .flexBox{
     display: flex;
     justify-content: space-between;
@@ -314,6 +309,85 @@ h1{
 }
 
 
+/*DISEÑO DE LA TABLA DE RESUMEN*/
+.pagina3 .informationTable{
+    width: 70%;
+    background-color: rgb(255, 255, 255);
+}
+
+.informationTable table.table{
+    border-collapse: collapse;
+    margin-left: 50px;
+}
+.informationTable table, 
+.informationTable th, 
+.informationTable td{
+    border: 1px solid rgb(196, 195, 195);
+    width: 800px;
+    height:65px;
+    font-size: 17px;
+}
+.informationTable th{
+    width: 20%;
+    text-align: left;
+    padding: 0px 15px
+}
+.informationTable td.datos{
+    width: 60%;
+}
+.informationTable td.change{
+    width: 25%;
+    text-align:center;
+    color: rgb(250, 22, 60);
+    
+}
+.informationTable td.change:hover{
+    color: rgb(133, 131, 131);
+    font-weight: bold;
+    opacity: 0.8;
+}
+/*DISEÑO DE LA TABLA DE ENVIO*/
+.pagina3 .informationTable{
+    width: 70%;
+    background-color: rgb(255, 255, 255);
+}
+
+.envio table.table2{
+    border-collapse: collapse;
+    margin-left: 50px;
+}
+.envio table, 
+.envio th, 
+.envio td{
+    border: 1px solid rgb(196, 195, 195);
+    width: 800px;
+    height:65px;
+    font-size: 17px;
+}
+.envio th{
+    width: 80%;
+    text-align: left;
+    padding: 0px 15px;
+    font-weight: normal;
+}
+.envio td{
+    text-align: center;
+}
+.envio h{
+    font-size: 25px;
+    padding-left: 25%;
+    color: rgb(235, 42, 74);
+    font-weight: bold;
+    line-height: 15mm;
+}
+.envio p{
+    font-size: 20px;
+    color: gray;
+    font-weight: bold;
+    margin-left: 50px;
+    line-height:50px
+
+}
 /* DISEÑO DE LA CAJA DE RESULTADOS */
 #resultado{
     background-color:rgb(211, 211, 211);

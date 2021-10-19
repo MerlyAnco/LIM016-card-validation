@@ -7,9 +7,39 @@ const boxNumber = document.querySelector("#formularioTotal")
 
 document.querySelector("#comprar1").addEventListener("click", ()=>{
     document.getElementById("pagina1").style.display="none";
-    document.getElementById("pagina3").style.display="block"
+    document.querySelector(".informacion").style.display="block"
 });
 
+//PASAR A DATOS RESUMIDOS DE INFORMACIÓN
+let email=document.querySelector("#correoElectronico")
+let direccion=document.querySelector("#direccion")
+let departamento = document.querySelector("#departamento")
+let provincia = document.querySelector("#provincia")
+let distrito = document.querySelector("#distrito")
+
+const enviarInformacion=document.querySelector("#enviarInformacion")
+
+function enviarInfo(){
+    document.querySelector("#informacion").style.display="none"
+    document.querySelector(".envio").style.display="block"
+    document.querySelector(".informationTable").style.display="block";
+    document.querySelector("#mail").innerHTML= email.value;
+    document.querySelector("#direccionFinal").innerHTML= direccion.value+", "+distrito.value+", "+provincia.value+ ", "+departamento.value
+    console.log(direccion.value+", "+distrito.value+", "+provincia.value+ ", "+departamento.value)
+    //document.querySelector("#direccionFinal").innerHTML= direccion + " " + distrito + " " + provincia + " " + departamento 
+}
+
+enviarInformacion.addEventListener("click",enviarInfo)
+
+//PASAR A LA PAGINA DE PAGO
+const continuarPago = document.querySelector("#continuarPago");
+
+function continuar_pago(){
+    document.querySelector(".envio").style.display="none"
+    document.querySelector(".cuadroDeFormulario").style.display="block"
+}
+
+continuarPago.addEventListener("click",continuar_pago);
 
 boxNumber.inputNumber.addEventListener("keyup", (e)=>{
     let valorNumero = e.target.value;
@@ -67,6 +97,7 @@ function validar(){
     else if (validator.isValid(numeroTarjeta)){
         document.getElementById("maskifyTarjeta").innerHTML = "La tarjeta que termina en " + cifrado +" es válida";
         document.getElementById("pagina3").style.display="none";
+        document.getElementById("informacion").style.display="none";
         document.getElementById("resultado").style.display="block";
         /*
         document.getElementById("logo").innerHTML=tipoTarjeta;

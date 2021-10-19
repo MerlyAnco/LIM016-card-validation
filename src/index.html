@@ -82,7 +82,7 @@
         </ul>
       </section>
 
-      <section id="informacion" class="informacion">
+      <section id="informacion" class="informacion" style="display: none">
         <div id="informacionDeContacto">
           <h>Información de contacto</h><br>
           <p>Los campos marcados con * son obligatorio</p><br>
@@ -116,7 +116,7 @@
           <label for="telefono">Teléfono*</label><br>
           <input type="text" id="telefono" placeholder="número de telefono">
           <br><br><br>
-          <button id="enviarInformacio" class="btn">Continuar envio</button>
+          <button id="enviarInformacion" class="btn">Continuar envio</button>
         </div>
 
         <div class="productoElegidos">
@@ -124,16 +124,51 @@
         </div>
         
       </section>
+      
 
-      <section class="pagina3" id="pagina3" style="display:none">
+      <section class="pagina3" id="pagina3" style="display:block">
+        
 
         <div class="pag3">
-          <div class="importe">
-            <p>Importe</p>
-            <p id="total"></p>
+          <div class="informationTable" style="display: none">
+            <p><span>Información</span> > <span>Envio</span> > <span>Pago</span> > <span>Orden Completada</span></p><br><br>
+            <table class="table">
+              <tr>
+                <th>Correo Electronico</th>
+                <td class="datos"><span id="mail"></span></td>
+                <td class="change"><span>Change</span></td>
+              </tr>
+              <tr>
+                <th>Dirección</th>
+                <td class="datos"><span id="direccionFinal"></span></td>
+                <td class="change">Change</td>
+              </tr>
+            </table>
+          </div><br>
+
+          <div class="envio" style="display: none">
+            <h>Envíos</h>
+            <p>Método de envio</p>
+            <table class="table2">
+              <tr>
+                <th>
+                  <input type="radio" name="metodoDeEnvio" id="Estandar">
+                  <label for="estandar">  Estandar</label></th>
+                <td>S/<span>10</span>.00</td>
+              </tr>
+              <tr>
+                <th>
+                  <input type="radio" name="metodoDeEnvio" id="Recojo">
+                  <label for="Recojo">  Recojo en oficina</label></th>
+                <td>S/<span>0</span>.00</td>
+              </tr>
+            </table>
+            <button type="button" class="btn" id="continuarPago">Ir a pagar</button>
           </div>
 
-          <div class="cuadroDeFormulario">
+        
+
+          <div class="cuadroDeFormulario" style="display: none">
             <h class="tituloDeForm">Pago con tarjeta</h>
 
             <form action="" id="formularioTotal" class="pago" >
