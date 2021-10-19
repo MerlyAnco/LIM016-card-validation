@@ -13,7 +13,6 @@ body{
 }
 
 
-
 /*DANDO ESTILO A LA BARRA DE MENU*/
 .navegador{
     list-style: none;
@@ -39,9 +38,9 @@ body{
     display:inline-block;
     margin-right: 0px;
     border-radius: 3px;
-    margin: 0 10px;
+    margin: 0 15px;
     color: white;
-    font-size: 15px;
+    font-size: 18px;
 
 }
 .navegador .menu li:hover{
@@ -50,11 +49,28 @@ body{
     padding: 7px 13px
 
 }
+
+.navegador .iconos li{
+    display:inline-block;
+    border-radius: 3px;
+    margin: 0 15px;
+    color: white;
+    font-size: 18px;
+
+}
+.navegador .iconos li:hover{
+    background-color: rgba(68, 66, 66, 0.303);
+    transition: 0.4s;
+    padding: 7px 13px
+
+}
+
 /*DANDO ESTILO A LA PORTADA*/
 #portada{
     width:100%;
     height:450px;
 }
+
 /*DANDO ESTILOS A LAS IMAGENES DE LOS PRODUCTOS*/
 .productos{
     width: 120px;
@@ -88,18 +104,52 @@ h1{
     color: rgb(225, 43, 98);
     text-align: center;
 }
+.descripcion{
+    margin-bottom: 20px;
 
+}
 #pagina1 .tipoProducto{
     font-size: 12px;
     color: gray;
     font-style: italic;
-
+    margin-bottom: 10px;
 }
+
+#flexboxPag1 .productos{
+    margin-left: 25%;
+    margin-bottom: 20px;
+}
+
+/*DANDO ESTILO A LOS BOTONES DE FORMULARIOS*/
+.btn{
+    border: 2px solid rgb(241, 31, 76);
+    margin-bottom:30px;
+    padding:20px;
+    width: 200px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    background-size: 100%;
+    transition: 0.6s;
+    background-color: white;
+    font-weight: bold;
+    float: right;
+}
+.btn:hover{
+    background-image: linear-gradient(to right,  #FF8DAF, #FF6190, #eb074b);
+    box-shadow: 2px 2px 0px rgb(155, 154, 154);
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
 
 .item3{
-    display: inline-block;
-}
-.pelicula {
     display: inline-block;
 }
 
@@ -120,7 +170,7 @@ h1{
 }
 
 #cvv{
-    width: 50%;
+    width: 66%;
 }
 
 .pago .añoDeExpiracion{
@@ -128,7 +178,6 @@ h1{
     margin-right: 5px;
 }
 
-#sele
 
 .cuadroDeFormulario{
     background-color: rgb(162, 250, 248);
@@ -139,15 +188,14 @@ h1{
     display: flex;
     justify-content: space-around;
 }
-/* diseño del la caja de resultados */
-#resultado{
-    background-color: white;
-}
+
+
 /* diseño del logo de tarjeta */
 #resultado #logo{
     width: 80px;
     height: 50px;
 }
+
 /*diseño del formulario*/
 .pagina3 .cuadroDeFormulario{
     background-color: rgb(255, 255, 255);
@@ -155,26 +203,28 @@ h1{
     width: 50%;
     height: 80vh;   
 }
+
 .tituloDeForm{
-    font-family: arial;
-    font-size: 5mm;
-    color:rgb(241, 99, 142);
+    color: rgb(235, 42, 74);
+    font-weight: bold;
+    line-height: 15mm;
+    font-size: 25px;
     width: 100%;
     padding-left: 35%;
     padding-top: 20px;
 }
 #formularioTotal{
-    padding-left: 15%;
+    padding-left:10%;
     font-family: arial;
 }
 .pagina3 input{
-    border: 1px solid rgb(213, 238, 240);
+    border: 1px solid rgb(194, 194, 194);
     font-size: 18px;
     height: 50px;
     width: 80%;
     padding: 5px 12px;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .pagina3 input:hover{
     border: 2px solid #85878a
@@ -182,6 +232,27 @@ h1{
 .pagina3 input:focus{
     outline: black;
     box-shadow: 1px 7px 10px -5px rgb(187, 184, 174);
+}
+
+.pagina3 label{
+    font-size: 15px;
+    padding: 5px 12px;
+    line-height: 10mm;
+    font-weight: bold;
+}
+#inputNumber{
+    margin-bottom: 5px;
+}
+#contenedorFecha_Cvv{
+    margin-top: 20px;
+}
+
+#recordatorio{
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+    margin-top:0; 
+    padding-left: 12px;
 }
 
 /*diseño de la compra*/
@@ -233,4 +304,129 @@ h1{
     padding: 5px 12px;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+.informacion input:focus{
+    outline: black;
+    box-shadow: 1px 7px 10px -5px rgb(187, 184, 174);
+}
+.informacion input:hover{
+    border: 2px solid #85878a
+}
+
+
+/* DISEÑO DE LA CAJA DE RESULTADOS */
+#resultado{
+    background-color:rgb(211, 211, 211);
+    border-radius: 5px;
+    width: 50%;
+    height: auto;   
+    margin: auto;
+    text-align: center;
+    line-height: 50px;
+}
+#resultado .btn1{
+    border: 2px solid rgb(182, 182, 182);
+    margin-top:20px;
+    padding:20px;
+    width: 200px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    background-size: 100%;
+    transition: 0.6s;
+    background-color: white;
+    font-weight: bold;
+}
+#resultado .btn1:hover{
+    background-image: linear-gradient(to right,  #FF8DAF, #FF6190, #eb074b);
+    box-shadow: 2px 2px 0px rgb(155, 154, 154);
+    color: white;
+}
+
+
+#resultado div{
+    font-size: 15px;
+}
+
+#resultado .fas{
+    font-size: 100px;
+    color: rgb(27, 197, 12);
+}
+#resultado h{
+    font-size:30px;
+    font-weight: bold;
+}
+#resultado p{
+    font-size: 20px;
+    color: rgb(83, 83, 83);
+}
+/*ESTILOS DEL FOOTER*/
+footer{
+    width: 100%;
+    padding: 0px 0px;
+    background-color: rgb(221, 218, 218);
+    background-size: cover;
+}
+
+.container_footer{
+    display: flex;
+    flex-wrap: wrap; /*ajustar el orden al tamaño de la pantalla*/
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+.box_footer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.box_footer .logoFinal img{
+    width: 180px;
+}
+
+.box_footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    color: rgb(100, 99, 99);
+    font-size: 18px;
+}
+
+.box_footer h2{
+    margin-top: 25px;
+    margin-bottom: 30px;
+    color: rgb(67, 67, 67)
+}
+
+.box_footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    text-decoration: none;
+}
+
+.box_footer a:hover{
+    opacity: 0.8;
+}
+.box_footer a .fab{
+    font-size:20px
+}
+
+.box_copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box_copyright p{
+    margin-top: 20px;
+    color: #7a7a7a
+}
+
+.box_copyrighth hr{
+    border: none;
+    height: 2px;
+    background-color: #7a7a7a;
 }

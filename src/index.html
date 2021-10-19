@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Validador</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/37946f5dd4.js" crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -14,6 +15,11 @@
           <li>PRODUCTOS</li>
           <li>OFERTAS</li>
           <li>CONTACTOS</li>
+        </ul>
+        <ul class="iconos">
+          <li><i class="fas fa-search"></i> </li>
+          <li><i class="fas fa-shopping-cart"></i></li>
+          <li><i class="fas fa-bars"></i></li>
         </ul>
     </header>
     <br><br>
@@ -78,15 +84,15 @@
 
       <section id="informacion" class="informacion">
         <div id="informacionDeContacto">
-          <h id="informacion">Información de contacto</h><br>
-          <p>los campos marcados con * son obligatorio</p><br>
+          <h>Información de contacto</h><br>
+          <p>Los campos marcados con * son obligatorio</p><br>
           <label for="correo electronico">Correo electrónico*</label><br>
           <input type="text" id="correoElectronico" placeholder="correo electrónico" autocomplete="off" required>
           
           <div class="flexBox">
             <div class="nombre">
-              <label for="name">Nombre*</label> <br>
-              <input type="text" id="name" placeholder="nombre" autocomplete="off" required></div>
+              <label for="name1">Nombre*</label> <br>
+              <input type="text" id="name1" placeholder="nombre" autocomplete="off" required></div>
             <div class="apellido">
               <label for="apellidos">Apellidos*</label><br>
               <input type="text" id="apellidos" placeholder="apellidos" autocomplete="off" required></div>
@@ -109,8 +115,8 @@
 
           <label for="telefono">Teléfono*</label><br>
           <input type="text" id="telefono" placeholder="número de telefono">
-          <br>
-          <button id="enviarInformacio">Continuar envio</button>
+          <br><br><br>
+          <button id="enviarInformacio" class="btn">Continuar envio</button>
         </div>
 
         <div class="productoElegidos">
@@ -128,7 +134,7 @@
           </div>
 
           <div class="cuadroDeFormulario">
-            <p class="tituloDeForm">PAGAR CON TARJETA</p>
+            <h class="tituloDeForm">Pago con tarjeta</h>
 
             <form action="" id="formularioTotal" class="pago" >
               
@@ -140,10 +146,10 @@
               <div class="formulario">
                 <label for="number_card">N° de la tarjeta:<br></label> 
                 <input type="text" id="inputNumber" placeholder= "0000 0000 0000 0000" maxlength="19" autocomplete="off" required><br>
-                <p id="recordatorio">recuerde que una tarjeta tiene un minimo de 12 digitos</p><br>
+                <span id="recordatorio"></span><br>
               </div>
 
-              <div class="flexbox">
+              <div class="flexbox" id="contenedorFecha_Cvv">
                 <div class="formulario expiracion">
                   <label for="selectMes">Fecha de Expiración</label><br>
                   <div class="flexbox">
@@ -161,53 +167,68 @@
                   <label for="cvv">CVV</label><br>
                   <input type="text" id="cvv" maxlength="3" placeholder="***" required>
                 </div><br><br>
-              </div>
-              <button type="button" id="btnDatos">PAGAR</button>
+              </div><br><br>
+              <button type="button" id="btnDatos" class="btn">PAGAR</button>
             </form>
           </div>
         </div>
       </section>
 
       <div id="resultado" style="display: none">
-        <img src = "foto.png" id="logo">
-        <div id="maskifyTarjeta"></div><br>
-        <div id="validatorTarjeta"></div>
+        <!--<img src = "foto.png" id="logo">-->
+        <div id="maskifyTarjeta"></div>
+        <!--<div id="validatorTarjeta"></div>-->
+        <span class="fas fa-check-circle"></span><br>
+        <h>¡Pago Exitoso!</h>
+        <p>Gracias por comprar con nosotros. Tu pedido se
+          esta procesando</p>
+        <button class="btn1" type="button" id="volver_Inicio">Volver al Inicio</button><br><br>
       </div>
-
     </main>
-    <br>
+    <br><br>
     <footer>
       <div class="container_footer">
         <div class="box_footer">
-          <div class="logo">
-            <img src="foto.png" alt="">
+          <div class="logoFinal">
+            <img src="https://logos-download.com/wp-content/uploads/2016/06/Missha_logo.png" alt="">
           </div>
           <div class="terms">
             <p>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, exercitationem. Ab sed exercitationem tempore dolorum repudiandae! Sequi soluta optio consequuntur nemo iure cupiditate deserunt ea, itaque consequatur possimus, natus deleniti!</p>
           </div>
         </div>
+
         <div class="box_footer">
-          <h>Sobre Skin Care</h>
+          <h2>Sobre Skin Care</h2>
           <a href="#">Sobre Nosotros</a>
           <a href="#">Contacto</a>
           <a href="#">Blog</a>
           <a href="#">Mapa del sitio</a>
         </div>
-      </div>
-      <div class="box_footer">
-        <h>Ayuda</h>
-        <a href="#">¿Cómo comprar?</a>
-        <a href="#">Preguntas Frecuentes</a>
-        <a href="#">Información de envío</a>
-        <a href="#">Políticas de devoluciones</a>
-        <a href="#">Términos y condiciones</a>
-      </div>
-      <div class="box_footer">
-        <a img="/img/facebook.png">facebook</a>
-        <a img="/img/instagram.png"></a>
-        <a href="/img/twitter.png">twitter</a>
+
+        <div class="box_footer">
+          <h2>Ayuda</h2>
+          <a href="#">¿Cómo comprar?</a>
+          <a href="#">Preguntas Frecuentes</a>
+          <a href="#">Información de envío</a>
+          <a href="#">Políticas de devoluciones</a>
+          <a href="#">Términos y condiciones</a>
+        </div>
+
+        <div class="box_footer">
+          <h2>Redes Sociales</h2>
+          <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+          <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+        </div>
+
       </div>
     
+      <div class="box_copyright">
+        <hr> <!--para crear una linea-->
+        <p>Todos los derechos reservados ©2021
+        <b>SkinCare</b></p>
+      </div>
     </footer>
     <script src="index.js" type="module"></script>
   </body>

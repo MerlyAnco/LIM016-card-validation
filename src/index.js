@@ -5,7 +5,7 @@ const boxNumber = document.querySelector("#formularioTotal")
 
 //pasar de pagina 1 a pagina 2
 
-document.querySelector(".btn1").addEventListener("click", ()=>{
+document.querySelector("#comprar1").addEventListener("click", ()=>{
     document.getElementById("pagina1").style.display="none";
     document.getElementById("pagina3").style.display="block"
 });
@@ -22,7 +22,8 @@ boxNumber.inputNumber.addEventListener("keyup", (e)=>{
     //agrupando cada 4 
     .replace(/([0-9]{4})/g, '$1 ')
     //quitando ultimo espacios 
-    .trim()
+    .trim();
+
 });
 
 //No dejar que se escriban numeros en titular de la tarjeta
@@ -56,21 +57,26 @@ const btnPagar = document.querySelector("#btnDatos")
 function validar(){
     let numeroTarjeta = creditNumberCard.value.replace(/\s/g, "");
     let cifrado = validator.maskify(numeroTarjeta)
-    let tipoTarjeta = validator.tarjetType(numeroTarjeta)
+    //let tipoTarjeta = validator.tarjetType(numeroTarjeta)
 
     if(numeroTarjeta==""){
-        alert("Por favor ingrese un numero de tarjeta")
+        //alert("Por favor ingrese un numero de tarjeta")
+        document.getElementById("recordatorio").innerHTML="* Recuerde que una tarjeta valida tiene un mínimo de 12 digitos"
+        //document.getElementById("recordatorio").style.color="red";
     }
     else if (validator.isValid(numeroTarjeta)){
+        document.getElementById("maskifyTarjeta").innerHTML = "La tarjeta que termina en " + cifrado +" es válida";
+        document.getElementById("pagina3").style.display="none";
+        document.getElementById("resultado").style.display="block";
+        /*
         document.getElementById("logo").innerHTML=tipoTarjeta;
         document.getElementById("maskifyTarjeta").innerHTML = "La tarjeta que termina en " + cifrado;
         document.getElementById("validatorTarjeta").style.color="rgb(14,158,55)";
         document.getElementById("validatorTarjeta").innerHTML="ES VALIDA";
-        document.getElementById("pagina3").style.display="none";
-        document.getElementById("resultado").style.display="block";
+        ;*/
     }
     else{
-        alert("la tarjeta que ingreso no es valida, por favor verifique de nuevo")
+        alert("la tarjeta que ingreso no es valida, por favor verifique de nuevo");
         /*
         document.getElementById("validatorTarjeta").style.color= "rgb(255,99,71)";
         document.getElementById("validatorTarjeta").innerHTML="NO ES VALIDA";
@@ -82,7 +88,10 @@ function validar(){
 
 btnPagar.addEventListener("click",validar);
 
+const recargar = document.querySelector("#volver_Inicio")
 
+
+recargar.addEventListener("click",()=>window.location.reload())
 /*
 let datos = function(){
     let name = document.getElementById("name").value;
