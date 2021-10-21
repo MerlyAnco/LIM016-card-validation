@@ -119,7 +119,7 @@ function validar(){
         ;*/
     }
     else{
-        alert("la tarjeta que ingreso no es valida, por favor verifique de nuevo");
+        document.querySelector(".ventana-error").style.display="block";
         /*
         document.getElementById("validatorTarjeta").style.color= "rgb(255,99,71)";
         document.getElementById("validatorTarjeta").innerHTML="NO ES VALIDA";
@@ -130,6 +130,17 @@ function validar(){
 }
 
 btnPagar.addEventListener("click",validar);
+//------------Funcion para cerrar mensaje de error (x)-----------
+document.querySelector(".btnCerrar").addEventListener("click",()=>{
+    document.querySelector(".ventana-error").style.display="none";
+    document.querySelector("#formularioTotal").reset();
+});
+
+//------------Funcion para cerrar mensaje de error (boton)-----------
+document.querySelector("#cerrarError").addEventListener("click",()=>{
+    document.querySelector(".ventana-error").style.display="none";
+});
+
 
 const recargar = document.querySelector("#volver_Inicio")
 

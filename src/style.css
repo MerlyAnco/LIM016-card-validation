@@ -224,10 +224,6 @@ h1{
     font-size: 15px
 }
 
-/*DANDO ESTILOS A LAS IMAGENES DE LOS PRODUCTOS*/
-
-
-
 /*DANDO ESTILO A LOS BOTONES DE FORMULARIOS*/
 .btn{
     border: 2px solid rgb(241, 31, 76);
@@ -421,6 +417,7 @@ h1{
 .pagina3 .informationTable{
     width: 70%;
     background-color: rgb(255, 255, 255);
+    
 }
 
 .informationTable table.table{
@@ -544,6 +541,38 @@ h1{
     font-size: 20px;
     color: rgb(83, 83, 83);
 }
+
+/*DANDO ESTILOS A LA CAJA DE ERROR */
+
+.ventana-error{
+    background-color: rgb(217, 124, 230, 0.5);
+    width:30%;
+    color: black;
+    font-size:18px;
+    text-align: center;
+    padding:33px;
+    height: 250px;
+    border-radius: 5px;
+    position: absolute;
+    left:34%;
+    top: 35%;  
+    line-height: 35px;  
+    display: none;
+}
+.ventana-error .fas{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size:22px;
+    color:rgb(97, 97, 97);
+}
+.ventana-error .fas:hover{
+    color: rgb(44, 44, 44);
+    transition: 0.4s;
+}
+.ventana-error #cerrarError{
+    margin-right: 23%;
+}
 /*ESTILOS DEL FOOTER*/
 footer{
     width: 100%;
@@ -611,4 +640,5 @@ footer{
     border: none;
     height: 2px;
     background-color: #7a7a7a;
+    
 }
