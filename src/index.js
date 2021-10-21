@@ -2,6 +2,18 @@ import validator from './validator.js';
 
 const boxNumber = document.querySelector("#formularioTotal")
     
+/*FUNCIONAMIENTO DEL CAROUSEL
+const carrousel = document.querySelector(".carrousel");
+const producto = document.querySelectorAll(".producto");
+
+const flechaIzquierda= document.getElementById("flecha-izquierda");
+const flechaDerecha= document.getElementById("flecha-derecha");
+
+//.................evento para flecha..........
+flechaDerecha.addEventListener("click",()=>{
+    carrousel.scrollLeft += carrousel.offsetWidth;
+});*/
+
 
 //pasar de pagina 1 a pagina 2
 

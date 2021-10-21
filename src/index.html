@@ -25,61 +25,94 @@
     <br><br>
     
     <main>
-      <section id="pagina1" style="display: block">
+      <section id="pagina1" style="display: none">
         <div class="portada">
-          <img id="portada" src="/img/portada.png">
+          <img id="portada" src="img/portada.png">
         </div>
         <br><br>
+
         <h1>PRODUCTOS MAS VENDIDOS</h1><br><br><br>
-        <ul id="flexboxPag1">
-          <li>
-            <p class="tipoProducto">crema</p>
-            <p class="descripcion">Crema hidratante para el rostro - Innisfree</p>
-            <img class="productos" src="/img/producto 1.jpg">
-            <div class="comprarflex">
-              <p class="precio">S/. 40.00 </p>
-              <button type="button" class="btn1" id="comprar1" value="40">comprar</button>
-            </div>
-          </li>
 
-          <li>
-            <p class="tipoProducto">mascarilla</p>
-            <p class="descripcion">Mascarilla para ojos Pink Blur</p>
-            <img class="productos" src="/img/producto 2.jpg">
-            <div class="comprarflex">
-              <p class="precio">S/. 50.00 </p>
-              <button type="button" class="btn1" id="comprar2" value="40">comprar</button>
+        <div class="contenedor-principal"> <!--sick-list-->
+          <button role="button" class="flecha-izquierda" id="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+          <div class="contenedor-carrousel">
+            <div class="carrousel"> <!--sick-track-->
+              <div class="producto"> <!--track-->
+                <div class="imagen">
+                <a href="#"><img src="img/product1.jpg" alt=""></a>
+                <div class="overlay">
+                  <button type="button" class="comprar" id="comprar1">comprar<i class="fas fa-shopping-cart"></i></button>
+                </div></div>
+                <div class="descripcion">
+                  <a href="#" class="nombre-producto">ACWELL</a>
+                  <span class="descripcion-producto">Licorice pH Balancing Advance Serum</span>
+                  <p>S/.<span class="precio">25.00</span></p>
+                </div>
+              </div>
+              <div class="producto"> <!--track-->
+                <div class="imagen">
+                <a href="#"><img src="img/product2.jpg" alt=""></a>
+                <div class="overlay">
+                  <button type="button" class="comprar">comprar<i class="fas fa-shopping-cart"></i></button>
+                </div></div>
+                <div class="descripcion">
+                  <a href="#" class="nombre-producto">ACWELL</a>
+                  <span class="descripcion-producto">Licorice pH Balancing Advance Serum</span>
+                  <p>S/.<span class="precio">25.00</span></p>
+                </div>
+              </div>
+              <div class="producto"> <!--track-->
+                <div class="imagen">
+                <a href="#"><img src="img/product3.jpg" alt=""></a>
+                <div class="overlay">
+                  <button type="button" class="comprar">comprar<i class="fas fa-shopping-cart"></i></button>
+                </div></div>
+                <div class="descripcion">
+                  <a href="#" class="nombre-producto">ACWELL</a>
+                  <span class="descripcion-producto">Licorice pH Balancing Advance Serum</span>
+                  <p>S/.<span class="precio">25.00</span></p>
+                </div>
+              </div>
+              <div class="producto"> <!--track-->
+                <div class="imagen">
+                <a href="#"><img src="img/product4.jpg" alt=""></a>
+                <div class="overlay">
+                  <button type="button" class="comprar">comprar<i class="fas fa-shopping-cart"></i></button>
+                </div></div>
+                <div class="descripcion">
+                  <a href="#" class="nombre-producto">ACWELL</a>
+                  <span class="descripcion-producto">Licorice pH Balancing Advance Serum</span>
+                  <p>S/.<span class="precio">25.00</span></p>
+                </div>
+              </div>
+              <div class="producto"> <!--track-->
+                <div class="imagen">
+                <a href="#"><img src="img/product5.jpg" alt=""></a>
+                <div class="overlay">
+                  <button type="button" class="comprar">comprar<i class="fas fa-shopping-cart"></i></button>
+                </div></div>
+                <div class="descripcion">
+                  <a href="#" class="nombre-producto">ACWELL</a>
+                  <span class="descripcion-producto">Licorice pH Balancing Advance Serum</span>
+                  <p>S/.<span class="precio">25.00</span></p>
+                </div>
+              </div>
+              <div class="producto"> <!--track-->
+                <div class="imagen">
+                <a href="#"><img src="img/product6.jpg" alt=""></a>
+                <div class="overlay">
+                  <button type="button" class="comprar">comprar<i class="fas fa-shopping-cart"></i></button>
+                </div></div>
+                <div class="descripcion">
+                  <a href="#" class="nombre-producto">ACWELL</a>
+                  <span class="descripcion-producto">Licorice pH Balancing Advance Serum</span>
+                  <p>S/.<span class="precio">25.00</span></p>
+                </div>
+              </div>
             </div>
-          </li>
-          <li>
-            <p class="tipoProducto">serum</p>
-            <p class="descripcion">Serum calmante de extracto de árbol de té</p>
-            <img class="productos" src="/img/producto 3.jpg">
-            <div class="comprarflex">
-              <p class="precio">S/. 80.00 </p>
-              <button type="button" class="btn1" id="comprar3" value="40">comprar</button>
-            </div>
-          </li>
-          <li>
-            <p class="tipoProducto">mascarilla</p>
-            <p class="descripcion">Mascarilla facial de colageno</p>
-            <img class="productos" src="/img/producto 4.jpg">
-            <div class="comprarflex">
-              <p class="precio">S/. 8.00 </p>
-              <button type="button" class="btn1" id="comprar4" value="40">comprar</button>
-            </div>
-          </li>
-          <li>
-            <p class="tipoProducto">exfoliante</p>
-            <p class="descripcion">Exfoliante Appletox - Tony Molly</p>
-            <img class="productos" src="/img/producto 5.jpg">
-            <div class="comprarflex">
-              <p class="precio">S/. 42.00 </p>
-              <button type="button" class="btn1" id="comprar5" value="40">comprar</button>
-            </div>
-          </li>
-
-        </ul>
+          </div>
+          <button type="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+        </div>
       </section>
 
       <section id="informacion" class="informacion" style="display: none">
@@ -128,10 +161,9 @@
 
       <section class="pagina3" id="pagina3" style="display:block">
         
-
         <div class="pag3">
           <div class="informationTable" style="display: none">
-            <p><span>Información</span> > <span>Envio</span> > <span>Pago</span> > <span>Orden Completada</span></p><br><br>
+            <p><span>Información</span> <span>Envio</span> <span>Pago</span> <span>Orden Completada</span></p><br><br>
             <table class="table">
               <tr>
                 <th>Correo Electronico</th>
@@ -168,7 +200,7 @@
 
         
 
-          <div class="cuadroDeFormulario" style="display: none">
+          <div class="cuadroDeFormulario" style="display: block">
             <h class="tituloDeForm">Pago con tarjeta</h>
 
             <form action="" id="formularioTotal" class="pago" >
@@ -218,6 +250,12 @@
         <p>Gracias por comprar con nosotros. Tu pedido se
           esta procesando</p>
         <button class="btn1" type="button" id="volver_Inicio">Volver al Inicio</button><br><br>
+      </div>
+
+      <div class="ventana-error">
+        <a href="#"><i class="fas fa-times-circle"></i></a>
+        <h>ERROR</h>
+        <p>La tarjeta que ingreso no es valida, por favor vuelva a intentarlo</p>
       </div>
     </main>
     <br><br>

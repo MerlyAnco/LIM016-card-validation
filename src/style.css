@@ -17,7 +17,7 @@ body{
 .navegador{
     list-style: none;
     padding: 0;
-    background: #f0416f;
+    background-image: linear-gradient(to right, #A77EB9, #C99CDC, #E4AFFA);
     height: 75px;
     width: 100%;
     margin: auto;
@@ -68,57 +68,165 @@ body{
 /*DANDO ESTILO A LA PORTADA*/
 #portada{
     width:100%;
-    height:450px;
-}
-
-/*DANDO ESTILOS A LAS IMAGENES DE LOS PRODUCTOS*/
-.productos{
-    width: 120px;
-    height: 180px;
-}
-#flexboxPag1{
-    display:flex;
-    justify-content: space-between;
-}
-.comprarflex{
-    display:flex;
-    justify-content: space-between;
-}
-
-#pagina1 #flexboxPag1 li{
-    list-style: none;
-    width:100%; 
-    margin-right: 5px;
-    padding: 0 10px;
-    border-radius: 3px;
-    border-left: 1px solid gray;
-}
-
-#pagina1 #flexboxPag1 li:hover{
-    transition: 0.4s;
-    box-shadow: 5px 0 10px black;
+    height:400px;
 }
 
 h1{
     font-size:30px;
-    color: rgb(225, 43, 98);
+    color: #8A46A8;
     text-align: center;
 }
+/*CONTENEDOR DE CARROUSEL*/
+
+.contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    padding: 10px 0;
+    max-width:95%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.contenedor-principal .flecha-izquierda,
+.contenedor-principal .flecha-derecha{
+    position: absolute;
+    border:none;
+    background: rgba(0,0,0,0.3);
+    font-size: 40px;
+    height: 30%;
+    top: calc(50%-30%);
+    line-height:40px;
+    width: 50px;
+    color: white;
+    z-index: 500;
+    transition: .2s ease all; /*buscar que es*/
+}
+
+.contenedor-principal .flecha-izquierda{
+    left: 0;
+}
+
+.contenedor-principal .flecha-derecha{
+    right: 0;
+}
+
+.contenedor-principal .flecha-izquierda:hover,
+.contenedor-principal .flecha-derecha:hover{
+    background: black;
+    opacity: .9;
+}
+/*
+.carrousel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+}*/
+
+
+.carrousel{
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+    position: relative;
+    
+}
+/*.carrousel img{
+    width: 313px;
+    height: 391px
+}*/
+.carrousel .producto{
+    width: 313px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    height: 100%;
+}
+.carrousel .producto .imagen{
+    position: relative;
+}
+.carrousel .producto a img{
+    object-fit: cover;
+    height:391px;
+    width: 100%;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+}
+
+.carrousel .producto a img:hover{
+    opacity: 0.8;
+
+}
+.carrousel .producto{
+    display: ;
+    
+}
+
+.overlay{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color:rgba(225, 144, 250, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.carrousel .producto button{
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #252525;
+    font-weight:700;
+    letter-spacing: 1px;
+    border-radius: 20px;
+
+}
+.carrousel .producto button:hover{
+    background-color: rgb(162, 162, 162);
+}
+
+.overlay{
+    visibility: hidden;
+}
+.carrousel .producto:hover .overlay{
+    visibility: visible;
+}
+/*------------dando estilos a caja de descripcion---------*/
 .descripcion{
-    margin-bottom: 20px;
+    display: grid;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+}
+.descripcion .nombre-producto{
+    font-weight: bold;
+    text-decoration:none;
+    color: black;
+}
+.descripcion .descripcion-producto{
+    font-size: 14px;
+    color:rgb(67, 67, 67);
+    width:100%;
+}
+.descripcion p{
+    font-size: 15px
+}
 
-}
-#pagina1 .tipoProducto{
-    font-size: 12px;
-    color: gray;
-    font-style: italic;
-    margin-bottom: 10px;
-}
+/*DANDO ESTILOS A LAS IMAGENES DE LOS PRODUCTOS*/
 
-#flexboxPag1 .productos{
-    margin-left: 25%;
-    margin-bottom: 20px;
-}
+
 
 /*DANDO ESTILO A LOS BOTONES DE FORMULARIOS*/
 .btn{
@@ -205,7 +313,7 @@ h1{
 }
 
 .tituloDeForm{
-    color: rgb(235, 42, 74);
+    color: #8A46A8;
     font-weight: bold;
     line-height: 15mm;
     font-size: 25px;
@@ -275,7 +383,7 @@ h1{
 .informacion h{
     font-size: 25px;
     padding-left: 25%;
-    color: rgb(235, 42, 74);
+    color: #8A46A8;
     font-weight: bold;
     line-height: 15mm;
 }
@@ -338,7 +446,7 @@ h1{
 .informationTable td.change{
     width: 25%;
     text-align:center;
-    color: rgb(250, 22, 60);
+    color: #8A46A8;
     
 }
 .informationTable td.change:hover{
@@ -376,7 +484,7 @@ h1{
 .envio h{
     font-size: 25px;
     padding-left: 25%;
-    color: rgb(235, 42, 74);
+    color: #8A46A8;
     font-weight: bold;
     line-height: 15mm;
 }

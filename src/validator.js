@@ -40,7 +40,7 @@ const validator = {
     }
     return digitos.join("");
     },
-
+/*
   tarjetType: function(numeroTarjeta){
     let numeros = Array.from(numeroTarjeta).map(Number);
 
@@ -57,7 +57,7 @@ const validator = {
     return imagen
     
   }
-
+*/
 }
 
 
