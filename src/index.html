@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Validador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/37946f5dd4.js" crossorigin="anonymous"></script>
     
   </head>
   <body>
     <header class="navegador">
-        <label class="logo">YOUR SKIN</label>
+        <label class="logo">MISSHA</label>
         <ul class="menu">
           <li>INICIO</li>
           <li>PRODUCTOS</li>
@@ -25,7 +28,7 @@
     <br><br>
     
     <main>
-      <section id="pagina1" style="display: none">
+      <section id="pagina1" style="display: block">
         <div class="portada">
           <img id="portada" src="img/portada.png">
         </div>
@@ -39,26 +42,26 @@
             <div class="carrousel"> <!--sick-track-->
               <div class="producto"> <!--track-->
                 <div class="imagen">
-                <a href="#"><img src="img/product1.jpg" alt=""></a>
+                <a href="#"><img id="producto1" src="img/product1.jpg" alt=""></a>
                 <div class="overlay">
-                  <button type="button" class="comprar" id="comprar1">comprar<i class="fas fa-shopping-cart"></i></button>
+                  <button type="button" class="comprar" id="comprar1" onclick="">comprar<i class="fas fa-shopping-cart"></i></button>
                 </div></div>
                 <div class="descripcion">
                   <a href="#" class="nombre-producto">ACWELL</a>
                   <span class="descripcion-producto">Licorice pH Balancing Advance Serum</span>
-                  <p>S/.<span class="precio">25.00</span></p>
+                  <p>S/.<span class="precio">38.00</span></p>
                 </div>
               </div>
               <div class="producto"> <!--track-->
                 <div class="imagen">
                 <a href="#"><img src="img/product2.jpg" alt=""></a>
                 <div class="overlay">
-                  <button type="button" class="comprar">comprar<i class="fas fa-shopping-cart"></i></button>
+                  <button type="button" class="comprar" id="comprar2">comprar<i class="fas fa-shopping-cart"></i></button>
                 </div></div>
                 <div class="descripcion">
-                  <a href="#" class="nombre-producto">ACWELL</a>
-                  <span class="descripcion-producto">Licorice pH Balancing Advance Serum</span>
-                  <p>S/.<span class="precio">25.00</span></p>
+                  <a href="#" class="nombre-producto">SATURDAY SKIN</a>
+                  <span class="descripcion-producto">Mascarilla para dormir con vitamina C de Yuzu</span>
+                  <p>S/.<span class="precio">80.00</span></p>
                 </div>
               </div>
               <div class="producto"> <!--track-->
@@ -68,21 +71,9 @@
                   <button type="button" class="comprar">comprar<i class="fas fa-shopping-cart"></i></button>
                 </div></div>
                 <div class="descripcion">
-                  <a href="#" class="nombre-producto">ACWELL</a>
-                  <span class="descripcion-producto">Licorice pH Balancing Advance Serum</span>
-                  <p>S/.<span class="precio">25.00</span></p>
-                </div>
-              </div>
-              <div class="producto"> <!--track-->
-                <div class="imagen">
-                <a href="#"><img src="img/product4.jpg" alt=""></a>
-                <div class="overlay">
-                  <button type="button" class="comprar">comprar<i class="fas fa-shopping-cart"></i></button>
-                </div></div>
-                <div class="descripcion">
-                  <a href="#" class="nombre-producto">ACWELL</a>
-                  <span class="descripcion-producto">Licorice pH Balancing Advance Serum</span>
-                  <p>S/.<span class="precio">25.00</span></p>
+                  <a href="#" class="nombre-producto">GOOD LIGHT</a>
+                  <span class="descripcion-producto">Loción tonificante lechosa Moon Glow</span>
+                  <p>S/.<span class="precio">42.00</span></p>
                 </div>
               </div>
               <div class="producto"> <!--track-->
@@ -92,14 +83,26 @@
                   <button type="button" class="comprar">comprar<i class="fas fa-shopping-cart"></i></button>
                 </div></div>
                 <div class="descripcion">
-                  <a href="#" class="nombre-producto">ACWELL</a>
-                  <span class="descripcion-producto">Licorice pH Balancing Advance Serum</span>
-                  <p>S/.<span class="precio">25.00</span></p>
+                  <a href="#" class="nombre-producto">BEAUTY OF JOSEON</a>
+                  <span class="descripcion-producto">Suero resplandor</span><br>
+                  <p>S/.<span class="precio">48.00</span></p>
                 </div>
               </div>
               <div class="producto"> <!--track-->
                 <div class="imagen">
-                <a href="#"><img src="img/product6.jpg" alt=""></a>
+                <a href="#"><img src="img/product4.jpg" alt=""></a>
+                <div class="overlay">
+                  <button type="button" class="comprar">comprar<i class="fas fa-shopping-cart"></i></button>
+                </div></div>
+                <div class="descripcion">
+                  <a href="#" class="nombre-producto">THEN I MET YOU</a>
+                  <span class="descripcion-producto">Bálsamo Limpiador Viviente</span><br>
+                  <p>S/.<span class="precio">55.00</span></p>
+                </div>
+              </div>
+              <div class="producto"> <!--track-->
+                <div class="imagen">
+                <a href="#"><img src="img/product1.jpg" alt=""></a>
                 <div class="overlay">
                   <button type="button" class="comprar">comprar<i class="fas fa-shopping-cart"></i></button>
                 </div></div>
@@ -115,12 +118,13 @@
         </div>
       </section>
 
-      <section id="informacion" class="informacion" style="display: none">
+      <!--<section id="informacion" class="informacion" style="display: block">
+      <div class="container-information">
         <div id="informacionDeContacto">
           <h>Información de contacto</h><br>
           <p>Los campos marcados con * son obligatorio</p><br>
           <label for="correo electronico">Correo electrónico*</label><br>
-          <input type="text" id="correoElectronico" placeholder="correo electrónico" autocomplete="off" required>
+          <input type="email" id="correoElectronico" placeholder="nombreusuario@gmail.com" autocomplete="off" required>
           
           <div class="flexBox">
             <div class="nombre">
@@ -132,7 +136,7 @@
           </div>
           
           <label for="direccion">Dirección de la calle*</label><br>
-          <input type="text" id="direccion" placeholder="dirección" autocomplete="off" required> 
+          <input type="text" id="direccion" placeholder="dirección" required autocomplete="off">
           
           <div class="flexBox"><br>
             <div class="departamento">
@@ -147,22 +151,87 @@
           </div>
 
           <label for="telefono">Teléfono*</label><br>
-          <input type="text" id="telefono" placeholder="número de telefono">
+          <input type="text" id="telefono" placeholder="999999999">
           <br><br><br>
           <button id="enviarInformacion" class="btn">Continuar envio</button>
         </div>
 
         <div class="productoElegidos">
-          hola
+          <h><i class="fas fa-shopping-cart"></i> Detalle de compras</h>
+          <table class="tabla-compras">
+            <tbody>
+              <tr>
+                <td class="productoFinal"><div class="productoF"></div></td>
+                <td class="nombreDelProducto"></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div><a href="#">¿Tienes un cupón? Haz clic aquí para introducir tu código</a>  </div>
+
+          <table>
+            <tfoot>
+              <tr>
+                <th>Precio:</th>
+                <td class="precioElegido"></td>
+              </tr>
+              <tr>
+                <th colspan="1">Envío</th>
+                <td colspan="1" class="envíoElegido"></td>
+              </tr>
+              <tr>
+                <th colspan="1">TOTAL:</th>
+                <td colspan="1" class="total"></td>
+              </tr>
+          </tfoot>
+          </table>
         </div>
-        
-      </section>
+      </div>
+      </section>--> 
       
 
-      <section class="pagina3" id="pagina3" style="display:block">
-        
+      <section class="pagina3" id="pagina3">
+      
+      
+      <div class="container-final">
         <div class="pag3">
-          <div class="informationTable" style="display: none">
+          <div class="informacionDeContacto" style="display:none">
+            <h>Información de contacto</h><br>
+            <p>Los campos marcados con * son obligatorio</p><br>
+            <label for="correo electronico">Correo electrónico*</label><br>
+            <input type="email" id="correoElectronico" placeholder="nombreusuario@gmail.com" autocomplete="off" required>
+            
+            <div class="flexBox">
+              <div class="nombre">
+                <label for="name1">Nombre*</label> <br>
+                <input type="text" id="name1" placeholder="nombre" autocomplete="off" required></div>
+              <div class="apellido">
+                <label for="apellidos">Apellidos*</label><br>
+                <input type="text" id="apellidos" placeholder="apellidos" autocomplete="off" required></div>
+            </div>
+            
+            <label for="direccion">Dirección de la calle*</label><br>
+            <input type="text" id="direccion" placeholder="dirección" required autocomplete="off">
+            
+            <div class="flexBox"><br>
+              <div class="departamento">
+                <label for="departamento">Departamento*</label><br>
+                <input type="text" id="departamento" placeholder="departamento"></div>
+              <div class="provincia">
+                <label for="provincia">Provincia*</label><br>
+                <input type="text" id="provincia" placeholder="provincia"></div>
+              <div class="distrito">
+                <label for="distrito">Distrito*</label><br>
+                <input type="text" id="distrito" placeholder="distrito"></div>
+            </div>
+  
+            <label for="telefono">Teléfono*</label><br>
+            <input type="text" id="telefono" placeholder="999999999">
+            <br><br><br>
+            <button id="enviarInformacion" class="btn">Continuar envio</button>
+          </div>
+        
+          <div class="informationTable" style="display:none" >
             <p><span>Información</span> <span>Envio</span> <span>Pago</span> <span>Orden Completada</span></p><br><br>
             <table class="table">
               <tr>
@@ -178,7 +247,7 @@
             </table>
           </div><br>
 
-          <div class="envio" style="display: none">
+          <div class="envio" style="display:none" >
             <h>Envíos</h>
             <p>Método de envio</p>
             <table class="table2">
@@ -194,13 +263,11 @@
                   <label for="Recojo">  Recojo en oficina</label></th>
                 <td>S/<span>0</span>.00</td>
               </tr>
-            </table>
+            </table><br> <br>
             <button type="button" class="btn" id="continuarPago">Ir a pagar</button>
-          </div>
-
-        
-
-          <div class="cuadroDeFormulario" style="display: block">
+          </div><br><br>
+          
+          <div class="cuadroDeFormulario" style="display:none">
             <h class="tituloDeForm">Pago con tarjeta</h>
 
             <form action="" id="formularioTotal" class="pago" >
@@ -234,12 +301,54 @@
                   <label for="cvv">CVV</label><br>
                   <input type="text" id="cvv" maxlength="3" placeholder="***" required>
                 </div><br><br>
-              </div><br><br>
-              <button type="button" id="btnDatos" class="btn">PAGAR</button>
+              </div><br>
+              <label for="tipoDeTarjeta">Tipo de Tarjeta</label><div id="tipoDeTarjeta" class="tipoDeTarjeta"></div><br>
+              <div class="btn-flex"> 
+                <div>
+                  <a href="#"><i class="far fa-hand-point-left"></i>Regresar</a>
+                </div>  
+                <div>
+                  <button type="button" id="btnDatos" class="btn">PAGAR</button>
+                </div>
+              </div> 
             </form>
-          </div>
+          </div><br>
         </div>
-      </section>
+
+        <div class="productoElegidos" style="display:none">
+          <h><i class="fas fa-shopping-cart"></i> Detalle de compras</h>
+          <table class="tabla-compras">
+            <tbody>
+              <tr>
+                <td class="productoFinal"><div class="productoF"></div></td>
+                <td class="nombreDelProducto"></td>
+              </tr>
+            </tbody>
+          </table><br>
+          
+          <div class="cupon"><a href="#">¿Tienes un cupón? Haz clic aquí para introducir tu código</a>  
+          </div><br>
+
+          <table class="tabla-precio">
+            <tfoot>
+              <tr>
+                <th>Precio:</th>
+                <td class="precioElegido"></td>
+              </tr>
+              
+              <tr class="envio1">
+                <th>Envío</th>
+                <td class="envioElegido"></td>
+              </tr>
+              <tr>
+                <th>TOTAL:</th>
+                <td class="total"></td>
+              </tr>
+          </tfoot>
+          </table>
+        </div>
+      </div>
+      </section>  
 
       <div id="resultado" style="display: none">
         <!--<img src = "foto.png" id="logo">-->
@@ -248,7 +357,14 @@
         <span class="fas fa-check-circle"></span><br>
         <h>¡Pago Exitoso!</h>
         <p>Gracias por comprar con nosotros. Tu pedido se
-          esta procesando</p>
+          esta procesando.</p>
+        <div class="resumen-pedido">
+          <h>RESUMEN DEL PEDIDO</h>
+          <p>Nombre y apellido: </p><div class="resumen-nombre"></div>
+          <p>Correo Electronico: </p><div class="resumen-correo"></div>
+          <p>Dirección de envio: </p><div class="resumen-direccion"></div>
+          <p>Número de contacto: </p><div class="resumen-telefono"></div>
+        </div>
         <button class="btn1" type="button" id="volver_Inicio">Volver al Inicio</button><br><br>
       </div>
 
@@ -259,7 +375,7 @@
         <button class="btn" type="button" id="cerrarError">Aceptar</button>
       </div>
     </main>
-    <br><br>
+
     <footer>
       <div class="container_footer">
         <div class="box_footer">
@@ -267,7 +383,7 @@
             <img src="https://logos-download.com/wp-content/uploads/2016/06/Missha_logo.png" alt="">
           </div>
           <div class="terms">
-            <p>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, exercitationem. Ab sed exercitationem tempore dolorum repudiandae! Sequi soluta optio consequuntur nemo iure cupiditate deserunt ea, itaque consequatur possimus, natus deleniti!</p>
+            <p><i class="fas fa-headphones-alt"></i><span class="escribenos">Escribenos a:</span><br><span class="correoEmpresa">hola@missha.com</span></p>
           </div>
         </div>
 
@@ -301,7 +417,7 @@
       <div class="box_copyright">
         <hr> <!--para crear una linea-->
         <p>Todos los derechos reservados ©2021
-        <b>SkinCare</b></p>
+        <b>Merly Anco</b></p>
       </div>
     </footer>
     <script src="index.js" type="module"></script>
