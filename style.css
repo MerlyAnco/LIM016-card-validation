@@ -1,0 +1,754 @@
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family:  'Montserrat', sans-serif;
+    
+    
+}
+
+
+/*DANDO ESTILO A LA BARRA DE MENU*/
+.navegador{
+    list-style: none;
+    padding: 0;
+    background-image: linear-gradient(to right, #A77EB9, #C99CDC, #E4AFFA);
+    height: 75px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    box-shadow: 5px 0 10px black;
+}
+.logo{
+    color: white;
+    font-size: 45px;
+    font-weight:bold;
+    padding: 20px;
+    letter-spacing:10px;
+}
+
+.navegador .menu li{
+    display:inline-block;
+    margin-right: 0px;
+    border-radius: 3px;
+    margin: 0 15px;
+    color: white;
+    font-size: 18px;
+
+}
+.navegador .menu li:hover{
+    background-color: rgba(0, 0, 0, 0.303);
+    transition: 0.4s;
+    padding: 7px 13px
+
+}
+
+.navegador .iconos li{
+    display:inline-block;
+    border-radius: 3px;
+    margin: 0 15px;
+    color: white;
+    font-size: 18px;
+
+}
+.navegador .iconos li:hover{
+    background-color: rgba(68, 66, 66, 0.303);
+    transition: 0.4s;
+    padding: 7px 13px
+
+}
+
+
+/*DANDO ESTILO A LA PORTADA*/
+#portada{
+    width:100%;
+    height:400px;
+}
+
+h1{
+    font-size:30px;
+    color: #8A46A8;
+    text-align: center;
+}
+/*CONTENEDOR DE CARROUSEL*/
+
+.contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    padding: 10px 0;
+    max-width:95%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.contenedor-principal .flecha-izquierda,
+.contenedor-principal .flecha-derecha{
+    position: absolute;
+    border:none;
+    background: rgba(0,0,0,0.3);
+    font-size: 40px;
+    height: 30%;
+    top: calc(50%-30%);
+    line-height:40px;
+    width: 50px;
+    color: white;
+    z-index: 500;
+    transition: .2s ease all; /*buscar que es*/
+}
+
+.contenedor-principal .flecha-izquierda{
+    left: 0;
+}
+
+.contenedor-principal .flecha-derecha{
+    right: 0;
+}
+
+.contenedor-principal .flecha-izquierda:hover,
+.contenedor-principal .flecha-derecha:hover{
+    background: black;
+    opacity: .9;
+}
+/*
+.carrousel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+}*/
+
+
+.carrousel{
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+    position: relative;
+    
+}
+/*.carrousel img{
+    width: 313px;
+    height: 391px
+}*/
+.carrousel .producto{
+    width: 313px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    height: 100%;
+}
+.carrousel .producto .imagen{
+    position: relative;
+}
+.carrousel .producto a img{
+    object-fit: cover;
+    height:391px;
+    width: 100%;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+}
+
+.carrousel .producto a img:hover{
+    opacity: 0.8;
+
+}
+
+.overlay{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color:rgba(247, 247, 247, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.carrousel .producto button{
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #252525;
+    font-weight:700;
+    letter-spacing: 1px;
+    border-radius: 20px;
+
+}
+.carrousel .producto button:hover{
+    background-color: rgb(9, 9, 9);
+    color:white
+}
+
+.overlay{
+    visibility: hidden;
+}
+.carrousel .producto:hover .overlay{
+    visibility: visible;
+}
+/*------------dando estilos a caja de descripcion---------*/
+.descripcion{
+    display: grid;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+}
+.descripcion .nombre-producto{
+    font-weight: bold;
+    text-decoration:none;
+    color: black;
+}
+.descripcion .descripcion-producto{
+    font-size: 14px;
+    color:rgb(67, 67, 67);
+    width:100%;
+}
+.descripcion p{
+    font-size: 15px
+}
+
+/*DANDO ESTILO A LOS BOTONES DE FORMULARIOS*/
+.btn{
+    border: 2px solid rgb(191, 70, 231);
+    margin-bottom:30px;
+    padding:20px;
+    width: 200px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    background-size: 100%;
+    transition: 0.6s;
+    background-color: white;
+    font-weight: bold;
+    float: right;
+}
+.btn:hover{
+    background-image: linear-gradient(to right,  #ecc3ec, #df94ee, #c447f5);
+    box-shadow: 2px 2px 0px rgb(155, 154, 154);
+    color: white;
+    font-weight: bold;
+    transition: 0.3s
+}
+
+
+/*ESTILO A LA CAJA DE FORMULARIO DE TARJETA */
+
+.pago .flexbox{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.pago .expiracion{
+    width: 50%;
+    
+}
+
+.pago .cvv{
+    min-width: 100px;
+    width: 30%;
+    height: 20px;
+}
+
+#cvv{
+    width: 66%;
+}
+
+.pago .añoDeExpiracion{
+    width: 100%;
+    margin-right: 5px;
+}
+
+
+/*.pag3{
+    display: flex;
+    justify-content: space-around;
+}
+*/
+
+/* DISEÑO DEL LOGO DE LA TARJETA */
+#resultado #logo{
+    width: 80px;
+    height: 50px;
+}
+
+/*DISEÑO DEL FORMULARIO DE TARJETA*/
+
+
+.tituloDeForm{
+    color: #8A46A8;
+    font-weight: bold;
+    line-height: 15mm;
+    font-size: 25px;
+    width: 100%;
+    padding-left: 35%;
+    padding-top: 20px;
+}
+
+.cuadroDeFormulario input{
+    border: 1px solid rgb(194, 194, 194);
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    padding: 5px 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.cuadroDeFormulario input:hover{
+    border: 2px solid #85878a
+}
+.cuadroDeFormulario input:focus{
+    outline: black;
+    box-shadow: 1px 7px 10px -5px rgb(187, 184, 174);
+}
+
+.cuadroDeFormulario label{
+    font-size: 15px;
+    padding: 5px 12px;
+    line-height: 10mm;
+    font-weight: bold;
+}
+#inputNumber{
+    margin-bottom: 5px;
+}
+#contenedorFecha_Cvv{
+    margin-top: 20px;
+}
+
+#recordatorio{
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+    margin-top:0; 
+    padding-left: 12px;
+}
+
+.cuadroDeFormulario .tipoDeTarjeta img{
+    width: 75px;
+    height: 50px;
+    margin-left: 25%    ;
+}
+
+/*DISEÑO DE LA PAG. DE INFORMACIÓN*/
+.informacionDeContacto .flexBox{
+    display: flex;
+    justify-content:
+}
+
+.informacionDeContacto .provincia,
+.informacionDeContacto .distrito{
+    width: 270px;
+    padding-left: 25px;
+
+}
+.apellido{
+    padding-right: 25%;
+    padding-left: 50px;
+}
+.informacionDeContacto h{
+    font-size: 25px;
+    
+    color: #8A46A8;
+    font-weight: bold;
+    line-height: 15mm;
+}
+.informacionDeContacto p{
+    font-size: 15px;
+    color: gray;
+    font-style: italic;
+
+}
+.informacionDeContacto label{
+    font-size: 15px;
+    padding: 5px 12px;
+    line-height: 10mm;
+    font-weight: bold;
+    color:#696666
+}
+.informacionDeContacto input{
+    border: 1px solid rgb(194, 194, 194);
+    font-size: 14px;
+    color:#333333;
+    height: 50px;
+    width: 100%;
+    padding: 5px 12px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.informacionDeContacto input:focus{
+    outline: black;
+    box-shadow: 1px 7px 10px -5px rgb(187, 184, 174);
+}
+.informacionDeContacto input:hover{
+    border: 2px solid #85878a
+}
+
+/* DISEÑO PARA LOS TRES FORMULARIOS*/
+
+.pagina3 .pag3{
+    display: grid;
+    padding: 0 70px;
+}
+
+.container-final{
+    display: flex;
+}
+
+/*DISEÑO DEL CARRITO DE COMPRAS*/
+
+.container-final .productoElegidos{
+    background-color: rgb(235, 235, 235);
+    padding: 0 80px;
+    border-left: 2px solid #a7a7a7;
+
+}
+
+.container-final .productoElegidos .productoF img{
+    width: 150px;
+    height:180px;
+}
+
+.container-final .tabla-compras{
+    border-bottom: 1px solid #c9c8c8;
+}
+
+
+.container-final .tabla-compras td.productoFinal{
+    width: 40%;
+    line-height:15mm;
+}
+
+.container-final .tabla-compras td.nombreDelProducto{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.productoElegidos h{
+    font-size: 25px;
+    padding-left: 25%;
+    color: #000000;
+    font-weight: bold;
+    line-height: 20mm;
+}
+
+.container-final .cupon a{
+    color: rgb(8, 53, 177);
+    font-size: 16px;
+}
+
+.container-final .cupon a:hover{
+    color: rgb(4, 40, 138);
+    font-weight: bold;
+}
+
+.container-final .tabla-precio {
+    width: 100%;
+    line-height:15mm;
+    border-top: 1px solid #c9c8c8;
+    border-bottom: 1px solid #c9c8c8;
+}
+.container-final .tabla-precio .envio1 th,
+.container-final .tabla-precio .envio1 td{ 
+    border-bottom: 1px solid #c9c8c8;
+    font-weight: bold;
+}
+.container-final .tabla-precio th{
+    width: 50%;
+    line-height:15mm;
+    text-align: left;
+    padding-left:20px;
+}
+
+.container-final .tabla-precio td.envioElegido{
+    font-size: 12px;
+    font-family:  arial;
+    color: gray
+}
+
+.container-final .tabla-precio td{
+    line-height:15mm;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.container-final .tabla-precio p{
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: normal;
+    color: #000000;
+}
+
+/*DISEÑO DE LA TABLA DE RESUMEN*/
+
+.informationTable table.table{
+    border-collapse: collapse;
+    width: 48vw;
+}
+.informationTable table, 
+.informationTable th, 
+.informationTable td{
+    border: 1px solid rgb(196, 195, 195);
+    width: ;
+    height:65px;
+    font-size: 17px;
+}
+.informationTable th{
+    width: 20%;
+    text-align: left;
+    padding: 0px 15px
+}
+.informationTable td.datos{
+    width: 60%;
+}
+.informationTable td.change{
+    width: 25%;
+    text-align:center;
+    color: #8A46A8;
+    
+}
+.informationTable td.change:hover{
+    color: rgb(133, 131, 131);
+    font-weight: bold;
+    opacity: 0.8;
+}
+/*DISEÑO DE LA TABLA DE ENVIO*/
+
+.envio table.table2{
+    border-collapse: collapse;
+}
+.envio table, 
+.envio th, 
+.envio td{
+    border: 1px solid rgb(196, 195, 195);
+    height:65px;
+    font-size: 17px;
+}
+.envio th{
+    width:90%;
+    text-align: left;
+    padding: 0px 15px;
+    font-weight: normal;
+}
+.envio td{
+    width:70px;
+    text-align: center;
+}
+.envio h{
+    font-size: 25px;
+    color: #8A46A8;
+    font-weight: bold;
+    line-height: 15mm;
+}
+.envio p{
+    font-size: 18px;
+    color: gray;    
+    margin-left: 10px;
+    line-height:50px
+
+}
+/* DISEÑO DE LA CAJA DE RESULTADOS */
+#resultado{
+    background-color:rgb(211, 211, 211);
+    border-radius: 5px;
+    width: 50%;
+    height: auto;   
+    margin: auto;
+    text-align: center;
+    line-height: 50px;
+}
+#resultado .btn1{
+    border: 2px solid rgb(182, 182, 182);
+    margin-top:20px;
+    padding:20px;
+    width: 200px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    background-size: 100%;
+    transition: 0.6s;
+    background-color: white;
+    font-weight: bold;
+}
+#resultado .btn1:hover{
+    background-image: linear-gradient(to right,  #FF8DAF, #FF6190, #eb074b);
+    box-shadow: 2px 2px 0px rgb(155, 154, 154);
+    color: white;
+}
+
+
+#resultado div{
+    font-size: 15px;
+}
+
+#resultado .fas{
+    font-size: 100px;
+    color: rgb(27, 197, 12);
+}
+#resultado h{
+    font-size:30px;
+    font-weight: bold;
+}
+#resultado p{
+    font-size: 20px;
+    color: rgb(83, 83, 83);
+}
+
+#resultado .resumen-pedido p{
+    font-size: 17px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 35px;
+    line-height:30px
+}
+#resultado .resumen-pedido h{
+    font-size:20px;
+    font-weight: bold;
+    color: rgb(85, 84, 84)
+}
+#resultado .resumen-pedido div{
+    font-size:15.5px;
+    text-align: left;
+    padding-left: 25%;
+    padding-top: 0;
+    color: rgb(85, 84, 84)
+}
+
+/*DANDO ESTILOS A LA CAJA DE ERROR */
+
+.ventana-error{
+    background-color: rgba(206, 206, 206, 0.693);
+    width:30%;
+    color: black;
+    font-size:18px;
+    text-align: center;
+    padding:33px;
+    height: 250px;
+    border-radius: 5px;
+    position: absolute;
+    left:34%;
+    top: 60%;  
+    line-height: 35px;  
+    display: none;
+}
+.ventana-error .fas{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size:22px;
+    color:rgb(97, 97, 97);
+}
+.ventana-error .fas:hover{
+    color: rgb(44, 44, 44);
+    transition: 0.4s;
+}
+.ventana-error #cerrarError{
+    margin-right: 23%;
+}
+/*ESTILOS DEL FOOTER*/
+footer{
+    width: 100%;
+    padding: 0px 0px;
+    background-color: rgb(221, 218, 218);
+    background-size: cover;
+}
+
+.container_footer{
+    display: flex;
+    flex-wrap: wrap; /*ajustar el orden al tamaño de la pantalla*/
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+.box_footer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.box_footer .logoFinal img{
+    width: 180px;
+}
+
+.box_footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    line-height:38px;
+}
+
+.box_footer .terms i{
+    color:#8A46A8;
+    font-size:45px;
+    
+}
+
+.box_footer .correoEmpresa{
+    font-size: 25px;
+    color:#8A46A8;
+    font-weight: bold;  
+
+}
+
+.box_footer .escribenos{
+    font-size: 20px;
+    padding-left: 10px;
+
+}
+
+.box_footer h2{
+    margin-top: 25px;
+    margin-bottom: 30px;
+    color: rgb(67, 67, 67)
+}
+
+.box_footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    text-decoration: none;
+}
+
+.box_footer a:hover{
+    opacity: 0.8;
+}
+.box_footer a .fab{
+    font-size:20px
+}
+
+.box_copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box_copyright p{
+    margin-top: 20px;
+    color: #7a7a7a
+}
+
+.box_copyrighth hr{
+    border: none;
+    height: 2px;
+    background-color: #7a7a7a;
+    
+}
+
